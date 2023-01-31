@@ -14,6 +14,7 @@
 		FD894A032988FFE5003E759D /* galpiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A022988FFE5003E759D /* galpiTests.swift */; };
 		FD894A0D2988FFE5003E759D /* galpiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0C2988FFE5003E759D /* galpiUITests.swift */; };
 		FD894A0F2988FFE5003E759D /* galpiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */; };
+		FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A1C29890958003E759D /* GalpiGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FD894A082988FFE5003E759D /* galpiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galpiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD894A0C2988FFE5003E759D /* galpiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITests.swift; sourceTree = "<group>"; };
 		FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD894A1C29890958003E759D /* GalpiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		FD8949F02988FFE3003E759D /* galpi */ = {
 			isa = PBXGroup;
 			children = (
+				FD894A1B298908CD003E759D /* GalpiGridView */,
 				FD8949F12988FFE3003E759D /* galpiApp.swift */,
 				FD8949F32988FFE3003E759D /* ContentView.swift */,
 				FD8949F52988FFE5003E759D /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */,
 			);
 			path = galpiUITests;
+			sourceTree = "<group>";
+		};
+		FD894A1B298908CD003E759D /* GalpiGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A1C29890958003E759D /* GalpiGridView.swift */,
+			);
+			path = GalpiGridView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
