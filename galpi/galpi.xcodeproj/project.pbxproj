@@ -15,6 +15,7 @@
 		FD894A0D2988FFE5003E759D /* galpiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0C2988FFE5003E759D /* galpiUITests.swift */; };
 		FD894A0F2988FFE5003E759D /* galpiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */; };
 		FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A1C29890958003E759D /* GalpiGridView.swift */; };
+		FD894A2129891276003E759D /* GalpiGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A2029891276003E759D /* GalpiGridCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FD894A0C2988FFE5003E759D /* galpiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITests.swift; sourceTree = "<group>"; };
 		FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FD894A1C29890958003E759D /* GalpiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridView.swift; sourceTree = "<group>"; };
+		FD894A2029891276003E759D /* GalpiGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FD894A1C29890958003E759D /* GalpiGridView.swift */,
+				FD894A2029891276003E759D /* GalpiGridCell.swift */,
 			);
 			path = GalpiGridView;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				FD894A2129891276003E759D /* GalpiGridCell.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
 			);
