@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EA29892B6200F317FD /* GalpiPostView.swift */; };
+		9B5320ED29892B8900F317FD /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EC29892B8900F317FD /* FieldView.swift */; };
 		FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F12988FFE3003E759D /* galpiApp.swift */; };
 		FD8949F42988FFE3003E759D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F32988FFE3003E759D /* ContentView.swift */; };
 		FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F52988FFE5003E759D /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		9B5320EA29892B6200F317FD /* GalpiPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostView.swift; sourceTree = "<group>"; };
+		9B5320EC29892B8900F317FD /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		FD8949EE2988FFE3003E759D /* galpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = galpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8949F12988FFE3003E759D /* galpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiApp.swift; sourceTree = "<group>"; };
 		FD8949F32988FFE3003E759D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9B5320EA29892B6200F317FD /* GalpiPostView.swift */,
+				9B5320EC29892B8900F317FD /* FieldView.swift */,
 			);
 			path = GalpiPost;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
 			);
