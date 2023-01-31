@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F12988FFE3003E759D /* galpiApp.swift */; };
+		FD8949F42988FFE3003E759D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F32988FFE3003E759D /* ContentView.swift */; };
+		FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F52988FFE5003E759D /* Assets.xcassets */; };
+		FD8949F92988FFE5003E759D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F82988FFE5003E759D /* Preview Assets.xcassets */; };
+		FD894A032988FFE5003E759D /* galpiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A022988FFE5003E759D /* galpiTests.swift */; };
+		FD894A0D2988FFE5003E759D /* galpiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0C2988FFE5003E759D /* galpiUITests.swift */; };
+		FD894A0F2988FFE5003E759D /* galpiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FD8949FF2988FFE5003E759D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD8949E62988FFE3003E759D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD8949ED2988FFE3003E759D;
+			remoteInfo = galpi;
+		};
+		FD894A092988FFE5003E759D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FD8949E62988FFE3003E759D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD8949ED2988FFE3003E759D;
+			remoteInfo = galpi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FD8949EE2988FFE3003E759D /* galpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = galpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8949F12988FFE3003E759D /* galpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiApp.swift; sourceTree = "<group>"; };
+		FD8949F32988FFE3003E759D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FD8949F52988FFE5003E759D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FD8949F82988FFE5003E759D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FD8949FE2988FFE5003E759D /* galpiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galpiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD894A022988FFE5003E759D /* galpiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiTests.swift; sourceTree = "<group>"; };
+		FD894A082988FFE5003E759D /* galpiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galpiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD894A0C2988FFE5003E759D /* galpiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITests.swift; sourceTree = "<group>"; };
+		FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FD8949EB2988FFE3003E759D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD8949FB2988FFE5003E759D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD894A052988FFE5003E759D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FD8949E52988FFE3003E759D = {
+			isa = PBXGroup;
+			children = (
+				FD8949F02988FFE3003E759D /* galpi */,
+				FD894A012988FFE5003E759D /* galpiTests */,
+				FD894A0B2988FFE5003E759D /* galpiUITests */,
+				FD8949EF2988FFE3003E759D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FD8949EF2988FFE3003E759D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD8949EE2988FFE3003E759D /* galpi.app */,
+				FD8949FE2988FFE5003E759D /* galpiTests.xctest */,
+				FD894A082988FFE5003E759D /* galpiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FD8949F02988FFE3003E759D /* galpi */ = {
+			isa = PBXGroup;
+			children = (
+				FD8949F12988FFE3003E759D /* galpiApp.swift */,
+				FD8949F32988FFE3003E759D /* ContentView.swift */,
+				FD8949F52988FFE5003E759D /* Assets.xcassets */,
+				FD8949F72988FFE5003E759D /* Preview Content */,
+			);
+			path = galpi;
+			sourceTree = "<group>";
+		};
+		FD8949F72988FFE5003E759D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FD8949F82988FFE5003E759D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FD894A012988FFE5003E759D /* galpiTests */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A022988FFE5003E759D /* galpiTests.swift */,
+			);
+			path = galpiTests;
+			sourceTree = "<group>";
+		};
+		FD894A0B2988FFE5003E759D /* galpiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A0C2988FFE5003E759D /* galpiUITests.swift */,
+				FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */,
+			);
+			path = galpiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FD8949ED2988FFE3003E759D /* galpi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD894A122988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpi" */;
+			buildPhases = (
+				FD8949EA2988FFE3003E759D /* Sources */,
+				FD8949EB2988FFE3003E759D /* Frameworks */,
+				FD8949EC2988FFE3003E759D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = galpi;
+			productName = galpi;
+			productReference = FD8949EE2988FFE3003E759D /* galpi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FD8949FD2988FFE5003E759D /* galpiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD894A152988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpiTests" */;
+			buildPhases = (
+				FD8949FA2988FFE5003E759D /* Sources */,
+				FD8949FB2988FFE5003E759D /* Frameworks */,
+				FD8949FC2988FFE5003E759D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD894A002988FFE5003E759D /* PBXTargetDependency */,
+			);
+			name = galpiTests;
+			productName = galpiTests;
+			productReference = FD8949FE2988FFE5003E759D /* galpiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FD894A072988FFE5003E759D /* galpiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD894A182988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpiUITests" */;
+			buildPhases = (
+				FD894A042988FFE5003E759D /* Sources */,
+				FD894A052988FFE5003E759D /* Frameworks */,
+				FD894A062988FFE5003E759D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FD894A0A2988FFE5003E759D /* PBXTargetDependency */,
+			);
+			name = galpiUITests;
+			productName = galpiUITests;
+			productReference = FD894A082988FFE5003E759D /* galpiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FD8949E62988FFE3003E759D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FD8949ED2988FFE3003E759D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FD8949FD2988FFE5003E759D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FD8949ED2988FFE3003E759D;
+					};
+					FD894A072988FFE5003E759D = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FD8949ED2988FFE3003E759D;
+					};
+				};
+			};
+			buildConfigurationList = FD8949E92988FFE3003E759D /* Build configuration list for PBXProject "galpi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FD8949E52988FFE3003E759D;
+			productRefGroup = FD8949EF2988FFE3003E759D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD8949ED2988FFE3003E759D /* galpi */,
+				FD8949FD2988FFE5003E759D /* galpiTests */,
+				FD894A072988FFE5003E759D /* galpiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FD8949EC2988FFE3003E759D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8949F92988FFE5003E759D /* Preview Assets.xcassets in Resources */,
+				FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD8949FC2988FFE5003E759D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD894A062988FFE5003E759D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FD8949EA2988FFE3003E759D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD8949FA2988FFE5003E759D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD894A032988FFE5003E759D /* galpiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD894A042988FFE5003E759D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD894A0F2988FFE5003E759D /* galpiUITestsLaunchTests.swift in Sources */,
+				FD894A0D2988FFE5003E759D /* galpiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FD894A002988FFE5003E759D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD8949ED2988FFE3003E759D /* galpi */;
+			targetProxy = FD8949FF2988FFE5003E759D /* PBXContainerItemProxy */;
+		};
+		FD894A0A2988FFE5003E759D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD8949ED2988FFE3003E759D /* galpi */;
+			targetProxy = FD894A092988FFE5003E759D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FD894A102988FFE5003E759D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FD894A112988FFE5003E759D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD894A132988FFE5003E759D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FD894A142988FFE5003E759D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FD894A162988FFE5003E759D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/galpi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/galpi";
+			};
+			name = Debug;
+		};
+		FD894A172988FFE5003E759D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/galpi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/galpi";
+			};
+			name = Release;
+		};
+		FD894A192988FFE5003E759D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = galpi;
+			};
+			name = Debug;
+		};
+		FD894A1A2988FFE5003E759D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pagination.galpiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = galpi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FD8949E92988FFE3003E759D /* Build configuration list for PBXProject "galpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD894A102988FFE5003E759D /* Debug */,
+				FD894A112988FFE5003E759D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD894A122988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD894A132988FFE5003E759D /* Debug */,
+				FD894A142988FFE5003E759D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD894A152988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD894A162988FFE5003E759D /* Debug */,
+				FD894A172988FFE5003E759D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD894A182988FFE5003E759D /* Build configuration list for PBXNativeTarget "galpiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD894A192988FFE5003E759D /* Debug */,
+				FD894A1A2988FFE5003E759D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FD8949E62988FFE3003E759D /* Project object */;
+}
