@@ -80,11 +80,19 @@
 		9B5320E929892B4400F317FD /* GalpiPost */ = {
 			isa = PBXGroup;
 			children = (
+				9B5320F029895E2800F317FD /* SubView */,
 				9B5320EA29892B6200F317FD /* GalpiPostView.swift */,
+			);
+			path = GalpiPost;
+			sourceTree = "<group>";
+		};
+		9B5320F029895E2800F317FD /* SubView */ = {
+			isa = PBXGroup;
+			children = (
 				9B5320EC29892B8900F317FD /* FieldView.swift */,
 				9B5320EE29892BA700F317FD /* TextLineView.swift */,
 			);
-			path = GalpiPost;
+			path = SubView;
 			sourceTree = "<group>";
 		};
 		FD8949E52988FFE3003E759D = {
