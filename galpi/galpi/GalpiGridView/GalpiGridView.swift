@@ -15,27 +15,25 @@ struct GalpiGridView: View {
     @State private var shouldPresentGalpiReadView = false
     
     var body: some View {
-        HStack {
+        NavigationStack {
             ScrollView {
                 LazyVGrid(columns: gridColumn, spacing: 37) {
                     ForEach(dummyGalpis, id: \.self) { galpi in
-                        GalpiGridCellView(galpi: galpi)
-                            .onTapGesture {
-                                selectedGalpi = galpi
-                                shouldPresentGalpiReadView.toggle()
+                        NavigationLink(value: galpi)  {
+                            GalpiGridCellView(galpi: galpi)
+                        }
+                        .navigationDestination(for: Galpi.self) { galpi in
+                            VStack {
+                                // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
+                                Text(galpi.title)
+                                Image(galpi.image)
                             }
-                            .fullScreenCover(isPresented: $shouldPresentGalpiReadView) {
-                                Button {
-                                    shouldPresentGalpiReadView.toggle()
-                                } label: {
-                                    // TODO: GalpiReadView에 galpi 전달하여 열기
-                                }
-                            }
+                        }
                     }
                 }
             }
+            .padding(EdgeInsets(top: 78, leading: 20, bottom: 0, trailing: 20))
         }
-        .padding(EdgeInsets(top: 78, leading: 20, bottom: 0, trailing: 20))
     }
 }
 
