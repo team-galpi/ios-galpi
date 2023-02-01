@@ -16,10 +16,10 @@ struct GalpiGridCellView: View {
             Image(galpi.image)
                 .resizable()
                 .scaledToFit()
-                .frame(maxWidth: 150, maxHeight: 200, alignment: .bottom)
+                .frame(maxWidth: 120, maxHeight: 165, alignment: .bottom)
             
             Rectangle()
-                .frame(width: 180, height: 1)
+                .frame(width: 140, height: 1)
                 .foregroundColor(.gray)
         }
     }
