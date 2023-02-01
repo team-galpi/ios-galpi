@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GalpiGridCell: View {
+struct GalpiGridCellView: View {
 
     var body: some View {
         VStack(spacing: 0) {
