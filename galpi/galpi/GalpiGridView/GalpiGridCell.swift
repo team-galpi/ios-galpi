@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct GalpiGridCellView: View {
+    
+    let galpi: Galpi
 
     var body: some View {
         VStack(spacing: 0) {
-            Image("test-bookcover")
+            Image(galpi.image)
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: 150, maxHeight: 200, alignment: .bottom)
@@ -24,7 +26,10 @@ struct GalpiGridCellView: View {
 }
 
 struct GalpiGridCell_Previews: PreviewProvider {
+    
+    static let galpi = dummyGalpis[0]
+    
     static var previews: some View {
-        GalpiGridCell()
+        GalpiGridCellView(galpi: galpi)
     }
 }
