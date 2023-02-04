@@ -15,24 +15,35 @@ struct GalpiGridView: View {
     @State private var shouldPresentGalpiReadView = false
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: gridColumn, spacing: 37) {
-                    ForEach(dummyGalpis, id: \.self) { galpi in
-                        NavigationLink(value: galpi)  {
-                            GalpiGridCellView(galpi: galpi)
-                        }
-                        .navigationDestination(for: Galpi.self) { galpi in
-                            VStack {
-                                // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
-                                Text(galpi.title)
-                                Image(galpi.image)
+        ZStack {
+            NavigationStack {
+                ScrollView {
+                    LazyVGrid(columns: gridColumn, spacing: 37) {
+                        ForEach(dummyGalpis, id: \.self) { galpi in
+                            NavigationLink(value: galpi)  {
+                                GalpiGridCellView(galpi: galpi)
+                            }
+                            .navigationDestination(for: Galpi.self) { galpi in
+                                VStack {
+                                    // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
+                                    Text(galpi.title)
+                                    Image(galpi.image)
+                                }
                             }
                         }
                     }
                 }
+                .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
             }
-            .padding(EdgeInsets(top: 78, leading: 20, bottom: 0, trailing: 20))
+                        
+            GalpiAddButton {
+                // TODO: 탭 되면 버튼 위에 선택지를 띄우는 기능 추가
+            }
+            .padding(EdgeInsets(top: 650, leading: 250, bottom: 45, trailing: 45))
+        }
+    }
+    
+}
 
 private extension GalpiGridView {
     
