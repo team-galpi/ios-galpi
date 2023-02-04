@@ -33,8 +33,20 @@ struct GalpiGridView: View {
                 }
             }
             .padding(EdgeInsets(top: 78, leading: 20, bottom: 0, trailing: 20))
+
+private extension GalpiGridView {
+    
+    func plusSymbol() -> some View {
+        ZStack {
+            Rectangle()
+                .frame(width: 25, height: 1)
+            
+            Rectangle()
+                .frame(width: 1, height: 25)
         }
+        .foregroundColor(.black)
     }
+    
 }
 
 struct GalpiGridView_Previews: PreviewProvider {
