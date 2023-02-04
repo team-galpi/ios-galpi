@@ -36,6 +36,21 @@ struct GalpiGridView: View {
 
 private extension GalpiGridView {
     
+    func GalpiAddButton(action: @escaping () -> Void) -> some View {
+        Button {
+            action()
+        } label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 8)
+                    .foregroundColor(.white)
+                    .shadow(color: .black.opacity(0.4), radius: 3, x: 4, y: 4)
+    
+                plusSymbol()
+            }
+            .frame(width: 60, height: 60)
+        }
+    }
+
     func plusSymbol() -> some View {
         ZStack {
             Rectangle()
