@@ -15,12 +15,9 @@ enum AppConstraints {
 }
 
 struct GalpiPostView: View {
-    @State var title = ""
-    @State var date = ""
-    @State var author = ""
-    @State var publisher = ""
-    @State var quotes = ""
-    @State var opinion = ""
+    @StateObject var viewModel: GalpiPostViewModel
+    @State var quotesIsPresented: Bool = false
+    @State var opinionIsPresented: Bool = false
     
     var body: some View {
         ScrollView {
@@ -34,11 +31,12 @@ struct GalpiPostView: View {
                             .padding(20)
                             .font(.title3)
                             .fontWeight(.thin)
-                            .foregroundColor(Color(uiColor: UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)))
+                            .foregroundColor(
+                                Color(uiColor: UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)))
                     }
                     Spacer()
                     Button {
-                        
+                        viewModel.createGalpi()
                     } label: {
                         Text("Done")
                             .foregroundColor(Color(uiColor: UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)))
@@ -57,17 +55,19 @@ struct GalpiPostView: View {
                         width: AppConstraints.width
                         - AppConstraints.tripartitionWidth,
                         alinement: .leading,
-                        label: $title
+                        label: $viewModel.title
                     )
                     FieldView(
                         title: "date",
                         lineLimit: 2,
                         width: AppConstraints.tripartitionWidth,
                         alinement: .leading,
-                        label: $date
+                        label: $viewModel.date
                     )
                     Spacer(minLength: 20)
                 }
+                
+                Spacer(minLength: 10)
                 
                 HStack {
                     Spacer(minLength: 20)
@@ -77,14 +77,14 @@ struct GalpiPostView: View {
                         width: AppConstraints.width
                         - AppConstraints.tripartitionWidth,
                         alinement: .leading,
-                        label: $author
+                        label: $viewModel.author
                     )
                     FieldView(
                         title: "publisher",
                         lineLimit: 2,
                         width: AppConstraints.tripartitionWidth,
                         alinement: .leading,
-                        label: $publisher
+                        label: $viewModel.publisher
                     )
                     Spacer(minLength: 20)
                 }
@@ -97,16 +97,40 @@ struct GalpiPostView: View {
                         Text("quotes")
                             .font(.caption)
                             .foregroundColor(.gray)
-                        
-                        TextEditor(text: $quotes)
-                            .lineLimit(3)
-                            .frame(minHeight: 30)
-                        
-                        if quotes.isEmpty {
+                        if viewModel.quotes.isEmpty {
+                            Button {
+                                self.quotesIsPresented.toggle()
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    Text(viewModel.quotes)
+                                    Rectangle()
+                                        .frame(width: AppConstraints.width, height: 25)
+                                        .foregroundColor(.clear)
+                                }
+                            }
+                            .fullScreenCover(isPresented: $quotesIsPresented) {
+                                GalpiTextEditorView(title: "quotes", text: $viewModel.quotes)
+                            }
                             Rectangle()
                                 .frame(width: AppConstraints.width, height: 1, alignment: .center)
                                 .foregroundColor(Color(UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)))
                         } else {
+                            Button {
+                                self.quotesIsPresented.toggle()
+                            } label: {
+                                VStack {
+                                    Rectangle()
+                                        .frame(width: AppConstraints.width, height: 5)
+                                        .foregroundColor(.clear)
+                                    Text(viewModel.quotes)
+                                        .frame(width: AppConstraints.width, alignment: .leading)
+                                        .multilineTextAlignment(.leading)
+                                        .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+                                }
+                            }
+                            .fullScreenCover(isPresented: $quotesIsPresented) {
+                                GalpiTextEditorView(title: "quotes", text: $viewModel.quotes)
+                            }
                             Rectangle()
                                 .frame(width: AppConstraints.width, height: 1, alignment: .center)
                                 .foregroundColor(.clear)
@@ -121,26 +145,38 @@ struct GalpiPostView: View {
                     Spacer(minLength: 20)
                     
                     VStack(alignment: .leading) {
-                        Text("opnion")
+                        Text("opinion")
                             .font(.caption)
                             .foregroundColor(.gray)
-                        
-                        TextEditor(text: $opinion)
-                            .lineLimit(0)
-                            .frame(minHeight: 30)
-                        if opinion.isEmpty {
-                            TextLineView()
+                        Spacer(minLength: 30)
+                        if viewModel.opinion.isEmpty {
+                            Button {
+                                self.opinionIsPresented.toggle()
+                            } label: {
+                                VStack {
+                                    TextLineView()
+                                }
+                            }
+                            .fullScreenCover(isPresented: $opinionIsPresented) {
+                                GalpiTextEditorView(title: "opinion", text: $viewModel.opinion)
+                            }
+                        } else {
+                            Button {
+                                self.opinionIsPresented.toggle()
+                            } label: {
+                                Text(viewModel.opinion)
+                                    .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+                                    .frame(width: AppConstraints.width, alignment: .leading)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            .fullScreenCover(isPresented: $opinionIsPresented) {
+                                GalpiTextEditorView(title: "opinion", text: $viewModel.opinion)
+                            }
                         }
                     }
                     Spacer(minLength: 20)
                 }
             }
         }
-    }
-}
-
-struct GalpiPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        GalpiPostView()
     }
 }
