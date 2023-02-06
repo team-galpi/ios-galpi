@@ -11,7 +11,7 @@ struct GalpiGridView: View {
     
     let gridColumn: [GridItem] = [GridItem(.adaptive(minimum: 140), spacing: 0)]
     
-    @State private var selectedGalpi = Galpi(title: "", image: "", date: Date.now, author: "", publisher: "", quotes: "", opinion: "")
+    @State private var selectedGalpi = Galpi()
     @State private var shouldPresentGalpiReadView = false
     @State private var shouldPresentActions = false
     
