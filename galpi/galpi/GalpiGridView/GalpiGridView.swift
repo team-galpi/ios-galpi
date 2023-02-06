@@ -13,6 +13,7 @@ struct GalpiGridView: View {
     
     @State private var selectedGalpi = Galpi(title: "", image: "", date: Date.now, author: "", publisher: "", quotes: "", opinion: "")
     @State private var shouldPresentGalpiReadView = false
+    @State private var shouldPresentActions = false
     
     var body: some View {
         ZStack {
@@ -35,17 +36,47 @@ struct GalpiGridView: View {
                 }
                 .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
             }
-                        
+            
             GalpiAddButton {
-                // TODO: 탭 되면 버튼 위에 선택지를 띄우는 기능 추가
+                shouldPresentActions.toggle()
             }
-            .padding(EdgeInsets(top: 650, leading: 250, bottom: 45, trailing: 45))
+            .overlay(alignment: .trailing) {
+                if shouldPresentActions {
+                    actionPickerMenu()
+                        .offset(y: -100)
+                }
+            }
+            .offset(x: 115)
+            .offset(y: 300)
         }
     }
     
 }
 
 private extension GalpiGridView {
+    
+    func actionPickerMenu() -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .frame(width: 150, height: 100)
+                .shadow(color: .black.opacity(0.4), radius: 3, x: 3, y: 3)
+                .foregroundColor(.white)
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Button("책 검색하기") {
+                    shouldPresentActions.toggle()
+                    // TODO: 책 검색하기 뷰 띄우기
+                }
+                
+                Button("직접 입력하기") {
+                    shouldPresentActions.toggle()
+                    // TODO: 직접 입력하기 뷰 띄우기
+                }
+            }
+            .foregroundColor(.black)
+            .padding(.leading, 10)
+        }
+    }
     
     func GalpiAddButton(action: @escaping () -> Void) -> some View {
         Button {
