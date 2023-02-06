@@ -62,11 +62,10 @@ private extension GalpiGridView {
     func actionPickerMenu() -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .frame(width: 150, height: 100)
                 .shadow(color: .black.opacity(0.4), radius: 3, x: 3, y: 3)
                 .foregroundColor(.white)
             
-            VStack(alignment: .leading, spacing: 10) {
+            VStack(alignment: .leading, spacing: 16) {
                 Button("책 검색하기") {
                     shouldPresentActions.toggle()
                     // TODO: 책 검색하기 뷰 띄우기
@@ -77,8 +76,9 @@ private extension GalpiGridView {
                     // TODO: 직접 입력하기 뷰 띄우기
                 }
             }
+            .frame(width: 140, height: 100)
             .foregroundColor(.black)
-            .padding(.leading, 10)
+            .padding(.trailing, 4)
         }
     }
     
