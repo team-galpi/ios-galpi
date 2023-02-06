@@ -16,8 +16,8 @@ enum AppConstraints {
 
 struct GalpiPostView: View {
     @StateObject var viewModel: GalpiPostViewModel
-    @State var quotesIsPresented: Bool = false
-    @State var opinionIsPresented: Bool = false
+    @State var isQuotesPresented: Bool = false
+    @State var isOpinionPresented: Bool = false
     
     var body: some View {
         ScrollView {
