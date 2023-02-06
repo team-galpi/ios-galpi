@@ -23,6 +23,7 @@ struct GalpiGridCellView: View {
                 .foregroundColor(.gray)
         }
     }
+    
 }
 
 struct GalpiGridCell_Previews: PreviewProvider {
@@ -32,4 +33,5 @@ struct GalpiGridCell_Previews: PreviewProvider {
     static var previews: some View {
         GalpiGridCellView(galpi: galpi)
     }
+    
 }
