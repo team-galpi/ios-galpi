@@ -37,7 +37,7 @@ struct GalpiGridView: View {
                 .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
             }
             
-            GalpiAddButton {
+            galpiAddButton {
                 shouldPresentActions.toggle()
             }
             .overlay(alignment: .trailing) {
@@ -78,7 +78,7 @@ private extension GalpiGridView {
         }
     }
     
-    func GalpiAddButton(action: @escaping () -> Void) -> some View {
+    func galpiAddButton(action: @escaping () -> Void) -> some View {
         Button {
             action()
         } label: {
@@ -109,7 +109,9 @@ private extension GalpiGridView {
 }
 
 struct GalpiGridView_Previews: PreviewProvider {
+    
     static var previews: some View {
         GalpiGridView()
     }
+    
 }
