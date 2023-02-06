@@ -26,6 +26,7 @@ struct FieldView: View {
                 .multilineTextAlignment(.leading)
             TextField(text: $label, axis: .vertical) {
             }
+            .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
             .lineLimit(lineLimit)
             .frame(minWidth: width - 10, maxHeight: 50)
             .onTapGesture {
