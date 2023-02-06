@@ -9,7 +9,7 @@ import Foundation
 
 final class GalpiPostViewModel: ObservableObject {
     @Published var title: String
-    @Published var date: String = ""
+    @Published var date: Date = Date()
     @Published var author: String
     @Published var publisher: String
     @Published var quotes: String = ""
