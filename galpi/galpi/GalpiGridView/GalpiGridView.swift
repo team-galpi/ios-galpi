@@ -102,6 +102,8 @@ private extension GalpiGridView {
                 .frame(width: 1, height: 25)
         }
         .foregroundColor(.black)
+        .rotationEffect(.degrees(shouldPresentActions ? 45 : 0))
+        .animation(Animation.easeOut(duration: 0.15), value: shouldPresentActions)
     }
     
 }
