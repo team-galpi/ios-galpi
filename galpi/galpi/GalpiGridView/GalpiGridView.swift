@@ -85,8 +85,8 @@ private extension GalpiGridView {
             ZStack {
                 RoundedRectangle(cornerRadius: 8)
                     .foregroundColor(.white)
-                    .shadow(color: .black.opacity(0.4), radius: 3, x: 4, y: 4)
-    
+                    .shadow(color: .black.opacity(0.4), radius: 3, x: 3, y: 3)
+                
                 plusSymbol()
             }
             .frame(width: 60, height: 60)
