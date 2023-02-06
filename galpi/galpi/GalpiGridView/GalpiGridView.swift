@@ -37,6 +37,10 @@ struct GalpiGridView: View {
                 .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
             }
             
+            if shouldPresentActions {
+                dimmedBackgroundButton()
+            }
+            
             galpiAddButton {
                 shouldPresentActions.toggle()
             }
@@ -104,6 +108,16 @@ private extension GalpiGridView {
         .foregroundColor(.black)
         .rotationEffect(.degrees(shouldPresentActions ? 45 : 0))
         .animation(Animation.easeOut(duration: 0.15), value: shouldPresentActions)
+    }
+    
+    func dimmedBackgroundButton() -> some View {
+        Button {
+            shouldPresentActions.toggle()
+        } label: {
+            Rectangle()
+                .foregroundColor(Color(UIColor(red: 0, green: 0, blue: 0, alpha: 0.24)))
+                .ignoresSafeArea()
+        }
     }
     
 }
