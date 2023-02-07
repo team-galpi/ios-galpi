@@ -14,6 +14,10 @@
 		FD894A032988FFE5003E759D /* galpiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A022988FFE5003E759D /* galpiTests.swift */; };
 		FD894A0D2988FFE5003E759D /* galpiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0C2988FFE5003E759D /* galpiUITests.swift */; };
 		FD894A0F2988FFE5003E759D /* galpiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */; };
+		FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A1C29890958003E759D /* GalpiGridView.swift */; };
+		FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A2029891276003E759D /* GalpiGridCellView.swift */; };
+		FD894A2329897C39003E759D /* MockCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A2229897C39003E759D /* MockCenter.swift */; };
+		FD894A262989AEC3003E759D /* Galpi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A252989AEC3003E759D /* Galpi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		FD894A082988FFE5003E759D /* galpiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galpiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD894A0C2988FFE5003E759D /* galpiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITests.swift; sourceTree = "<group>"; };
 		FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FD894A1C29890958003E759D /* GalpiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridView.swift; sourceTree = "<group>"; };
+		FD894A2029891276003E759D /* GalpiGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridCellView.swift; sourceTree = "<group>"; };
+		FD894A2229897C39003E759D /* MockCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCenter.swift; sourceTree = "<group>"; };
+		FD894A252989AEC3003E759D /* Galpi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galpi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,8 @@
 		FD8949E52988FFE3003E759D = {
 			isa = PBXGroup;
 			children = (
+				FD8949F12988FFE3003E759D /* galpiApp.swift */,
+				FD894A2229897C39003E759D /* MockCenter.swift */,
 				FD8949F02988FFE3003E759D /* galpi */,
 				FD894A012988FFE5003E759D /* galpiTests */,
 				FD894A0B2988FFE5003E759D /* galpiUITests */,
@@ -94,7 +104,8 @@
 		FD8949F02988FFE3003E759D /* galpi */ = {
 			isa = PBXGroup;
 			children = (
-				FD8949F12988FFE3003E759D /* galpiApp.swift */,
+				FD894A29298A2616003E759D /* Entities */,
+				FD894A1B298908CD003E759D /* GalpiGridView */,
 				FD8949F32988FFE3003E759D /* ContentView.swift */,
 				FD8949F52988FFE5003E759D /* Assets.xcassets */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
@@ -125,6 +136,23 @@
 				FD894A0E2988FFE5003E759D /* galpiUITestsLaunchTests.swift */,
 			);
 			path = galpiUITests;
+			sourceTree = "<group>";
+		};
+		FD894A1B298908CD003E759D /* GalpiGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A1C29890958003E759D /* GalpiGridView.swift */,
+				FD894A2029891276003E759D /* GalpiGridCellView.swift */,
+			);
+			path = GalpiGridView;
+			sourceTree = "<group>";
+		};
+		FD894A29298A2616003E759D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A252989AEC3003E759D /* Galpi.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
+				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
+				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
+				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
