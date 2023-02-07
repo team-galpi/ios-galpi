@@ -16,8 +16,8 @@ struct GalpiGridView: View {
     @State private var shouldPresentActions = false
     
     var body: some View {
-        ZStack {
-            NavigationStack {
+        NavigationStack {
+            ZStack {
                 ScrollView {
                     LazyVGrid(columns: gridColumn, spacing: 37) {
                         ForEach(dummyGalpis, id: \.self) { galpi in
@@ -35,23 +35,23 @@ struct GalpiGridView: View {
                     }
                 }
                 .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
-            }
-            
-            if shouldPresentActions {
-                dimmedBackgroundButton()
-            }
-            
-            galpiAddButton {
-                shouldPresentActions.toggle()
-            }
-            .overlay(alignment: .trailing) {
+                
                 if shouldPresentActions {
-                    actionPickerMenu()
-                        .offset(y: -100)
+                    dimmedBackgroundButton()
                 }
+                
+                galpiAddButton {
+                    shouldPresentActions.toggle()
+                }
+                .overlay(alignment: .trailing) {
+                    if shouldPresentActions {
+                        actionPickerMenu()
+                            .offset(y: -100)
+                    }
+                }
+                .offset(x: 115)
+                .offset(y: 300)
             }
-            .offset(x: 115)
-            .offset(y: 300)
         }
     }
     
