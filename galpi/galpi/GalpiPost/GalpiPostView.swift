@@ -56,7 +56,7 @@ struct GalpiPostView: View {
                             lineLimit: 2,
                             width: AppConstraints.width
                             - AppConstraints.tripartitionWidth,
-                            alinement: .leading,
+                            alignment: .leading,
                             label: $viewModel.title
                         )
                         
@@ -88,14 +88,14 @@ struct GalpiPostView: View {
                             lineLimit: 2,
                             width: AppConstraints.width
                             - AppConstraints.tripartitionWidth,
-                            alinement: .leading,
+                            alignment: .leading,
                             label: $viewModel.author
                         )
                         FieldView(
                             title: "publisher",
                             lineLimit: 2,
                             width: AppConstraints.tripartitionWidth,
-                            alinement: .leading,
+                            alignment: .leading,
                             label: $viewModel.publisher
                         )
                         Spacer(minLength: 20)

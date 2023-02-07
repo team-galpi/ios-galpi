@@ -11,13 +11,13 @@ struct FieldView: View {
     let title: String
     let lineLimit: Int
     let width: CGFloat
-    let alinement: HorizontalAlignment
+    let alignment: HorizontalAlignment
     @Binding var label: String
     @State var isHiddenLine: Bool = false
     
     var body: some View {
         
-        VStack(alignment: alinement) {
+        VStack(alignment: alignment) {
             Spacer()
             Text(title)
                 .font(.caption)
