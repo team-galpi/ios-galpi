@@ -105,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				FD894A29298A2616003E759D /* Entities */,
-				FD894A242989887A003E759D /* ViewModelInterfaces */,
 				FD894A1B298908CD003E759D /* GalpiGridView */,
 				FD8949F32988FFE3003E759D /* ContentView.swift */,
 				FD8949F52988FFE5003E759D /* Assets.xcassets */,
@@ -146,13 +145,6 @@
 				FD894A2029891276003E759D /* GalpiGridCellView.swift */,
 			);
 			path = GalpiGridView;
-			sourceTree = "<group>";
-		};
-		FD894A242989887A003E759D /* ViewModelInterfaces */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModelInterfaces;
 			sourceTree = "<group>";
 		};
 		FD894A29298A2616003E759D /* Entities */ = {
