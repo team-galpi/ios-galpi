@@ -121,7 +121,9 @@ struct GalpiPostView: View {
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", text: $viewModel.quotes)
+                                    GalpiTextEditorView(title: "quotes", description: viewModel.quotes) { description in
+                                        viewModel.quotes = description
+                                    }
                                 }
                                 Rectangle()
                                     .frame(width: AppConstraints.width, height: 1, alignment: .center)
@@ -141,7 +143,9 @@ struct GalpiPostView: View {
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", text: $viewModel.quotes)
+                                    GalpiTextEditorView(title: "quotes", description: viewModel.quotes) { description in
+                                        viewModel.quotes = description
+                                    }
                                 }
                                 Rectangle()
                                     .frame(width: AppConstraints.width, height: 1, alignment: .center)
@@ -170,7 +174,12 @@ struct GalpiPostView: View {
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
-                                    GalpiTextEditorView(title: "opinion", text: $viewModel.opinion)
+                                    GalpiTextEditorView(
+                                        title: "opinion",
+                                        description: viewModel.opinion
+                                    ) { description in
+                                        viewModel.opinion = description
+                                    }
                                 }
                             } else {
                                 Button {
@@ -182,7 +191,9 @@ struct GalpiPostView: View {
                                         .multilineTextAlignment(.leading)
                                 }
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
-                                    GalpiTextEditorView(title: "opinion", text: $viewModel.opinion)
+                                    GalpiTextEditorView(title: "opinion", description: viewModel.opinion) { description in
+                                        viewModel.opinion = description
+                                    }
                                 }
                             }
                         }
