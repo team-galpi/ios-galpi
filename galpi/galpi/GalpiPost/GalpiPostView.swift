@@ -8,8 +8,8 @@
 import SwiftUI
 
 enum AppConstraints {
-    static let horizentalSpacing: CGFloat = 40
-    static let width = UIScreen.main.bounds.width - horizentalSpacing
+    static let horizontalSpacing: CGFloat = 40
+    static let width = UIScreen.main.bounds.width - horizontalSpacing
     static let height = UIScreen.main.bounds.height
     static let tripartitionWidth = width / 3
 }
