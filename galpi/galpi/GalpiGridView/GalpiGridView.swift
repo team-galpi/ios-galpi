@@ -18,39 +18,15 @@ struct GalpiGridView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                ScrollView {
-                    LazyVGrid(columns: gridColumn, spacing: 37) {
-                        ForEach(dummyGalpis, id: \.self) { galpi in
-                            NavigationLink(value: galpi)  {
-                                GalpiGridCellView(galpi: galpi)
-                            }
-                            .navigationDestination(for: Galpi.self) { galpi in
-                                VStack {
-                                    // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
-                                    Text(galpi.title)
-                                    Image(galpi.image)
-                                }
-                            }
-                        }
-                    }
-                }
-                .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
+                galpiGridView()
+                    .padding(EdgeInsets(top: 58, leading: 20, bottom: 0, trailing: 20))
                 
                 if shouldPresentActions {
                     dimmedBackgroundButton()
                 }
                 
-                galpiAddButton {
-                    shouldPresentActions.toggle()
-                }
-                .overlay(alignment: .trailing) {
-                    if shouldPresentActions {
-                        actionPickerMenu()
-                            .offset(y: -100)
-                    }
-                }
-                .offset(x: 115)
-                .offset(y: 300)
+                galpiAddButtonWithActions()
+                    .offset(x: 115, y: 300)
             }
         }
     }
@@ -58,6 +34,42 @@ struct GalpiGridView: View {
 }
 
 private extension GalpiGridView {
+    
+    func galpiGridView() -> some View {
+        ScrollView {
+            LazyVGrid(columns: gridColumn, spacing: 37) {
+                ForEach(dummyGalpis, id: \.self) { galpi in
+                    NavigationLink(value: galpi)  {
+                        GalpiGridCellView(galpi: galpi)
+                    }
+                    .navigationDestination(for: Galpi.self) { galpi in
+                        VStack {
+                            // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
+                            Text(galpi.title)
+                            Image(galpi.image)
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
+
+private extension GalpiGridView {
+    
+    func galpiAddButtonWithActions() -> some View {
+        galpiAddButton {
+            shouldPresentActions.toggle()
+        }
+        .overlay(alignment: .trailing) {
+            if shouldPresentActions {
+                actionPickerMenu()
+                    .offset(y: -100)
+            }
+        }
+    }
     
     func actionPickerMenu() -> some View {
         ZStack {
