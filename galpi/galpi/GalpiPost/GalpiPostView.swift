@@ -22,6 +22,7 @@ struct GalpiPostView: View {
     @State private var isQuotesPresented: Bool = false
     @State private var isOpinionPresented: Bool = false
     @State private var isDatePickerPresented: Bool = false
+    let completion: (Bool) -> Void
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -31,6 +32,7 @@ struct GalpiPostView: View {
                     
                     HStack {
                         Button {
+                            completion(false)
                             dismiss()
                         } label: {
                             Image(systemName: "xmark")
@@ -42,7 +44,9 @@ struct GalpiPostView: View {
                         }
                         Spacer()
                         Button {
+                            completion(false)
                             viewModel.createGalpi()
+                            dismiss()
                         } label: {
                             Text("Done")
                                 .foregroundColor(Color(uiColor: UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)))
