@@ -13,6 +13,7 @@ struct GalpiGridView: View {
     
     @State private var selectedGalpi = Galpi()
     @State private var shouldPresentGalpiReadView = false
+    @State private var shouldPresentGalpiPostView = false
     @State private var shouldPresentActions = false
     
     var body: some View {
@@ -84,8 +85,12 @@ private extension GalpiGridView {
                 }
                 
                 Button("직접 입력하기") {
-                    shouldPresentActions.toggle()
-                    // TODO: 직접 입력하기 뷰 띄우기
+                    shouldPresentGalpiPostView.toggle()
+                }
+                .fullScreenCover(isPresented: $shouldPresentGalpiPostView) {
+                    GalpiPostView(viewModel: GalpiPostViewModel()) { completion in
+                        shouldPresentActions = completion
+                    }
                 }
             }
             .frame(width: 140, height: 100)

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EA29892B6200F317FD /* GalpiPostView.swift */; };
+		9B5320ED29892B8900F317FD /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EC29892B8900F317FD /* FieldView.swift */; };
+		9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EE29892BA700F317FD /* TextLineView.swift */; };
+		9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */; };
+		9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */; };
+		9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */; };
 		FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F12988FFE3003E759D /* galpiApp.swift */; };
-		FD8949F42988FFE3003E759D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F32988FFE3003E759D /* ContentView.swift */; };
 		FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F52988FFE5003E759D /* Assets.xcassets */; };
 		FD8949F92988FFE5003E759D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F82988FFE5003E759D /* Preview Assets.xcassets */; };
 		FD894A032988FFE5003E759D /* galpiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A022988FFE5003E759D /* galpiTests.swift */; };
@@ -38,9 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B5320EA29892B6200F317FD /* GalpiPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostView.swift; sourceTree = "<group>"; };
+		9B5320EC29892B8900F317FD /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
+		9B5320EE29892BA700F317FD /* TextLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLineView.swift; sourceTree = "<group>"; };
+		9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostViewModel.swift; sourceTree = "<group>"; };
+		9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiTextEditorView.swift; sourceTree = "<group>"; };
+		9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FD8949EE2988FFE3003E759D /* galpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = galpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8949F12988FFE3003E759D /* galpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiApp.swift; sourceTree = "<group>"; };
-		FD8949F32988FFE3003E759D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD8949F52988FFE5003E759D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD8949F82988FFE5003E759D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FD8949FE2988FFE5003E759D /* galpiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galpiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,10 +89,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD8949E52988FFE3003E759D = {
+		9B5320E929892B4400F317FD /* GalpiPost */ = {
+			isa = PBXGroup;
+			children = (
+				9B5320F029895E2800F317FD /* SubViews */,
+				9B5320EA29892B6200F317FD /* GalpiPostView.swift */,
+				9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */,
+				9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */,
+			);
+			path = GalpiPost;
+			sourceTree = "<group>";
+		};
+		9B5320F029895E2800F317FD /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				9B5320EC29892B8900F317FD /* FieldView.swift */,
+				9B5320EE29892BA700F317FD /* TextLineView.swift */,
+				9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		9BE32DF42993820E002C1D86 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FD894A1B298908CD003E759D /* GalpiGrid */,
+				9B5320E929892B4400F317FD /* GalpiPost */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9BE32DF52993822E002C1D86 /* Entry */ = {
 			isa = PBXGroup;
 			children = (
 				FD8949F12988FFE3003E759D /* galpiApp.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		9BE32DF6299382F5002C1D86 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FD8949F52988FFE5003E759D /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FD8949E52988FFE3003E759D = {
+			isa = PBXGroup;
+			children = (
 				FD894A2229897C39003E759D /* MockCenter.swift */,
 				FD8949F02988FFE3003E759D /* galpi */,
 				FD894A012988FFE5003E759D /* galpiTests */,
@@ -104,10 +159,10 @@
 		FD8949F02988FFE3003E759D /* galpi */ = {
 			isa = PBXGroup;
 			children = (
+				9BE32DF52993822E002C1D86 /* Entry */,
 				FD894A29298A2616003E759D /* Entities */,
-				FD894A1B298908CD003E759D /* GalpiGridView */,
-				FD8949F32988FFE3003E759D /* ContentView.swift */,
-				FD8949F52988FFE5003E759D /* Assets.xcassets */,
+				9BE32DF42993820E002C1D86 /* Domain */,
+				9BE32DF6299382F5002C1D86 /* SupportFiles */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
 			);
 			path = galpi;
@@ -138,13 +193,13 @@
 			path = galpiUITests;
 			sourceTree = "<group>";
 		};
-		FD894A1B298908CD003E759D /* GalpiGridView */ = {
+		FD894A1B298908CD003E759D /* GalpiGrid */ = {
 			isa = PBXGroup;
 			children = (
 				FD894A1C29890958003E759D /* GalpiGridView.swift */,
 				FD894A2029891276003E759D /* GalpiGridCellView.swift */,
 			);
-			path = GalpiGridView;
+			path = GalpiGrid;
 			sourceTree = "<group>";
 		};
 		FD894A29298A2616003E759D /* Entities */ = {
@@ -285,7 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD8949F42988FFE3003E759D /* ContentView.swift in Sources */,
+				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
+				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
+				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
+				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
+				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
+				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
