@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TextLineView: View {
+    
     let numberOfLines: Int
     
     var body: some View {
@@ -20,4 +21,5 @@ struct TextLineView: View {
             }
         }
     }
+    
 }

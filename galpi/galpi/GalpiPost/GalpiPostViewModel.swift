@@ -8,6 +8,7 @@
 import Foundation
 
 final class GalpiPostViewModel: ObservableObject {
+    
     @Published var title: String
     @Published var date: Date = Date()
     @Published var author: String
@@ -28,4 +29,5 @@ final class GalpiPostViewModel: ObservableObject {
     func createGalpi() {
         
     }
+    
 }

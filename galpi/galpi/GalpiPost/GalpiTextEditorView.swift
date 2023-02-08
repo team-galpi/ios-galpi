@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct GalpiTextEditorView: View {
-    @Environment(\.dismiss) private var dismiss
+    
     var title: String
-    @State var isAlertPresented: Bool = false
+    @Environment(\.dismiss) private var dismiss
+    @State private var isAlertPresented: Bool = false
     @State var description: String
     let completion: (String) -> Void
     
@@ -36,8 +37,8 @@ struct GalpiTextEditorView: View {
                         }),
                         secondaryButton: .default(Text("아니오")))
                 }
-
                 Spacer()
+                
                 Button {
                     completion(description)
                     dismiss()
@@ -47,7 +48,6 @@ struct GalpiTextEditorView: View {
                         .fontWeight(.light)
                 }
                 .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 20))
-                
             }
             
             Text(title)
@@ -58,7 +58,9 @@ struct GalpiTextEditorView: View {
             TextEditor(text: $description)
                     .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 30))
                     .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+            
             Spacer()
         }
     }
+    
 }

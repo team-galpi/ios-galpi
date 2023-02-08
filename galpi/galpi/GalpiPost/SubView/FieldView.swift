@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct FieldView: View {
+    
     let title: String
     let lineLimit: Int
     let width: CGFloat
     let alignment: HorizontalAlignment
     @Binding var label: String
-    @State var isHiddenLine: Bool = false
+    @State private var isHiddenLine: Bool = false
     
     var body: some View {
         
@@ -37,4 +38,5 @@ struct FieldView: View {
                 .foregroundColor(label.isEmpty ? Color(UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)) : .clear)
         }
     }
+    
 }

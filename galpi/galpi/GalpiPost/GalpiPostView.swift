@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum AppConstraints {
+    
     static let horizontalSpacing: CGFloat = 40
     static let width = UIScreen.main.bounds.width - horizontalSpacing
     static let height = UIScreen.main.bounds.height
@@ -15,19 +16,22 @@ enum AppConstraints {
 }
 
 struct GalpiPostView: View {
+    
+    @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel: GalpiPostViewModel
-    @State var isQuotesPresented: Bool = false
-    @State var isOpinionPresented: Bool = false
-    @State var isDatePickerPresented: Bool = false
+    @State private var isQuotesPresented: Bool = false
+    @State private var isOpinionPresented: Bool = false
+    @State private var isDatePickerPresented: Bool = false
     
     var body: some View {
         ZStack(alignment: .center) {
         ScrollView {
                 VStack(alignment: .center) {
                     Spacer(minLength: 10)
+                    
                     HStack {
                         Button {
-                            
+                            dismiss()
                         } label: {
                             Image(systemName: "xmark")
                                 .padding(20)
@@ -45,10 +49,9 @@ struct GalpiPostView: View {
                                 .fontWeight(.light)
                         }
                         .padding(30)
-                        
                     }
-                    
                     Spacer(minLength: 40)
+                    
                     HStack {
                         Spacer(minLength: 20)
                         FieldView(
@@ -78,7 +81,6 @@ struct GalpiPostView: View {
                         }
                         Spacer(minLength: 20)
                     }
-                    
                     Spacer(minLength: 10)
                     
                     HStack {
@@ -100,7 +102,6 @@ struct GalpiPostView: View {
                         )
                         Spacer(minLength: 20)
                     }
-                    
                     Spacer(minLength: 50)
                     
                     HStack {
@@ -152,7 +153,6 @@ struct GalpiPostView: View {
                         }
                         Spacer(minLength: 20)
                     }
-                    
                     Spacer(minLength: 50)
                     
                     HStack {
@@ -189,7 +189,10 @@ struct GalpiPostView: View {
                                         .multilineTextAlignment(.leading)
                                 }
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
-                                    GalpiTextEditorView(title: "opinion", description: viewModel.opinion) { description in
+                                    GalpiTextEditorView(
+                                        title: "opinion",
+                                        description: viewModel.opinion
+                                    ) { description in
                                         viewModel.opinion = description
                                     }
                                 }
@@ -210,4 +213,5 @@ struct GalpiPostView: View {
         dateFormatter.dateFormat = "yyyy.MM.dd"
         return dateFormatter.string(from: date)
     }
+    
 }

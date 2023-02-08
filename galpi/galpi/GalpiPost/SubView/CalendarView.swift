@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
+    
     @Binding var date: Date
     @Binding var isDismiss: Bool
     
@@ -32,6 +33,6 @@ struct CalendarView: View {
                 .backgroundStyle(.white)
         }
         Spacer()
-        
     }
+    
 }
