@@ -203,7 +203,7 @@ struct GalpiPostView: View {
                 }
             }
             if isDatePickerPresented {
-                CalendarView(date: $viewModel.date, isDismiss: $isDatePickerPresented)
+                CalendarView(date: $viewModel.date, isPresented: $isDatePickerPresented)
             }
         }
     }

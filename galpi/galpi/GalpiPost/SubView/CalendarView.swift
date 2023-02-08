@@ -10,12 +10,12 @@ import SwiftUI
 struct CalendarView: View {
     
     @Binding var date: Date
-    @Binding var isDismiss: Bool
+    @Binding var isPresented: Bool
     
     var body: some View {
         ZStack {
             Button {
-                isDismiss.toggle()
+                isPresented.toggle()
             } label: {
                 Rectangle()
                     .foregroundColor(Color(UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.3)))
