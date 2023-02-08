@@ -32,15 +32,9 @@ struct FieldView: View {
             .onTapGesture {
                 isHiddenLine = true
             }
-            if label.isEmpty {
-                Rectangle()
-                    .frame(width: width - 30, height: 1, alignment: .leading)
-                    .foregroundColor(Color(UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)))
-            } else {
-                Rectangle()
-                    .frame(width: width - 30, height: 1, alignment: .leading)
-                    .foregroundColor(.clear)
-            }
+            Rectangle()
+                .frame(width: width - 30, height: 1, alignment: .leading)
+                .foregroundColor(label.isEmpty ? Color(UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)) : .clear)
         }
     }
 }
