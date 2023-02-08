@@ -125,9 +125,7 @@ struct GalpiPostView: View {
                                         viewModel.quotes = description
                                     }
                                 }
-                                Rectangle()
-                                    .frame(width: AppConstraints.width, height: 1, alignment: .center)
-                                    .foregroundColor(Color(UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)))
+                                TextLineView(numberOfLines: 1)
                             } else {
                                 Button {
                                     self.isQuotesPresented.toggle()
@@ -164,13 +162,13 @@ struct GalpiPostView: View {
                             Text("opinion")
                                 .font(.caption)
                                 .foregroundColor(.gray)
-                            Spacer(minLength: 30)
+                            Spacer(minLength: 40)
                             if viewModel.opinion.isEmpty {
                                 Button {
                                     self.isOpinionPresented.toggle()
                                 } label: {
                                     VStack {
-                                        TextLineView()
+                                        TextLineView(numberOfLines: 3)
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
