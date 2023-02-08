@@ -31,11 +31,11 @@ struct GalpiTextEditorView: View {
                 .alert(isPresented: $isAlertPresented) {
                     Alert(
                         title: Text("작성을 취소하시겠습니까?"),
-                        primaryButton: .default(Text("예"), action: {
+                        primaryButton: .destructive(Text("예"), action: {
                             isAlertPresented = false
                             dismiss()
                         }),
-                        secondaryButton: .default(Text("아니오")))
+                        secondaryButton: .cancel(Text("아니오")))
                 }
                 Spacer()
                 
