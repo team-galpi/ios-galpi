@@ -11,12 +11,17 @@ struct TabBarContainerView: View {
     
     @State private var selectionTagIndex: Int = 0
     
+    init() {
+        UITabBar.appearance().backgroundColor = .black
+    }
+    
     var body: some View {
         TabView(selection: $selectionTagIndex) {
             GalpiGridView()
                 .tabItem {
                     Text("GALPI")
                 }
+                .toolbarBackground(.black, for: .tabBar)
                 .tag(0)
             
             // TODO: MYPAGE 구현 후 연결하기
@@ -24,6 +29,7 @@ struct TabBarContainerView: View {
                 .tabItem {
                     Text("MYPAGE")
                 }
+                .toolbarBackground(.black, for: .tabBar)
                 .tag(1)
         }
     }
