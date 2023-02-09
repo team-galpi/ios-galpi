@@ -11,6 +11,7 @@
 		9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAB2994C7BF00EE436E /* Color+Extension.swift */; };
 		9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAD2994C88E00EE436E /* Font+Extension.swift */; };
 		9B445DE52994ECD600EE436E /* JejuMyeongjoOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B445DE42994ECD600EE436E /* JejuMyeongjoOTF.otf */; };
+		9B445DEB2994F2AD00EE436E /* KoPubBatangLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B445DEA2994F2AD00EE436E /* KoPubBatangLight.ttf */; };
 		9B445DEE2995312F00EE436E /* KoPubBatangMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B445DED2995312F00EE436E /* KoPubBatangMedium.ttf */; };
 		9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EA29892B6200F317FD /* GalpiPostView.swift */; };
 		9B5320ED29892B8900F317FD /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EC29892B8900F317FD /* FieldView.swift */; };
@@ -52,6 +53,7 @@
 		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		9B445DAD2994C88E00EE436E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		9B445DE42994ECD600EE436E /* JejuMyeongjoOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JejuMyeongjoOTF.otf; sourceTree = "<group>"; };
+		9B445DEA2994F2AD00EE436E /* KoPubBatangLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KoPubBatangLight.ttf; sourceTree = "<group>"; };
 		9B445DED2995312F00EE436E /* KoPubBatangMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KoPubBatangMedium.ttf; sourceTree = "<group>"; };
 		9B5320EA29892B6200F317FD /* GalpiPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostView.swift; sourceTree = "<group>"; };
 		9B5320EC29892B8900F317FD /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9B445DED2995312F00EE436E /* KoPubBatangMedium.ttf */,
+				9B445DEA2994F2AD00EE436E /* KoPubBatangLight.ttf */,
 			);
 			path = KoPubBatang;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				9B445DEE2995312F00EE436E /* KoPubBatangMedium.ttf in Resources */,
 				FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */,
 				9B445DE52994ECD600EE436E /* JejuMyeongjoOTF.otf in Resources */,
+				9B445DEB2994F2AD00EE436E /* KoPubBatangLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
