@@ -13,7 +13,7 @@
 		9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */; };
 		9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */; };
 		9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */; };
-		FD127D862995022A009D54E1 /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD127D852995022A009D54E1 /* TabBarContainerView.swift */; };
+		FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F78BC2995731500075C7D /* TabBarContainerView.swift */; };
 		FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F12988FFE3003E759D /* galpiApp.swift */; };
 		FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F52988FFE5003E759D /* Assets.xcassets */; };
 		FD8949F92988FFE5003E759D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD8949F82988FFE5003E759D /* Preview Assets.xcassets */; };
@@ -50,7 +50,7 @@
 		9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostViewModel.swift; sourceTree = "<group>"; };
 		9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiTextEditorView.swift; sourceTree = "<group>"; };
 		9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		FD127D852995022A009D54E1 /* TabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
+		FD5F78BC2995731500075C7D /* TabBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
 		FD8949EE2988FFE3003E759D /* galpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = galpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8949F12988FFE3003E759D /* galpiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galpiApp.swift; sourceTree = "<group>"; };
 		FD8949F52988FFE5003E759D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		9BE32DF42993820E002C1D86 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FD127D832994FB7C009D54E1 /* Common */,
+				FD5F78BB2995731500075C7D /* Common */,
 				FD894A1B298908CD003E759D /* GalpiGrid */,
 				9B5320E929892B4400F317FD /* GalpiPost */,
 			);
@@ -138,7 +138,14 @@
 			path = SupportFiles;
 			sourceTree = "<group>";
 		};
-				FD127D852995022A009D54E1 /* TabBarContainerView.swift */,
+		FD5F78BB2995731500075C7D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FD5F78BC2995731500075C7D /* TabBarContainerView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		FD8949E52988FFE3003E759D = {
 			isa = PBXGroup;
 			children = (
@@ -347,10 +354,10 @@
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
-				FD127D862995022A009D54E1 /* TabBarContainerView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
+				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
