@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B445DA72994C6C600EE436E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DA62994C6C600EE436E /* Color.swift */; };
 		9B445DA92994C6E700EE436E /* GDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DA82994C6E700EE436E /* GDS.swift */; };
 		9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAB2994C7BF00EE436E /* Color+Extension.swift */; };
 		9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAD2994C88E00EE436E /* Font+Extension.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B445DA62994C6C600EE436E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9B445DA82994C6E700EE436E /* GDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDS.swift; sourceTree = "<group>"; };
 		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		9B445DAD2994C88E00EE436E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9B445DA82994C6E700EE436E /* GDS.swift */,
+				9B445DA62994C6C600EE436E /* Color.swift */,
 			);
 			path = GDS;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
+				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
