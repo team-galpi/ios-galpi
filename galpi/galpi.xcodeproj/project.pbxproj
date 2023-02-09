@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAB2994C7BF00EE436E /* Color+Extension.swift */; };
 		9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EA29892B6200F317FD /* GalpiPostView.swift */; };
 		9B5320ED29892B8900F317FD /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EC29892B8900F317FD /* FieldView.swift */; };
 		9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EE29892BA700F317FD /* TextLineView.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		9B5320EA29892B6200F317FD /* GalpiPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostView.swift; sourceTree = "<group>"; };
 		9B5320EC29892B8900F317FD /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		9B5320EE29892BA700F317FD /* TextLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLineView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B445DAA2994C79B00EE436E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B445DAB2994C7BF00EE436E /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9B5320E929892B4400F317FD /* GalpiPost */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 				FD894A29298A2616003E759D /* Entities */,
 				9BE32DF42993820E002C1D86 /* Domain */,
 				9BE32DF6299382F5002C1D86 /* SupportFiles */,
+				9B445DAA2994C79B00EE436E /* Extension */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
 			);
 			path = galpi;
@@ -351,6 +362,7 @@
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
 				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
+				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
