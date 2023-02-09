@@ -229,10 +229,10 @@
 				9BE32DF52993822E002C1D86 /* Entry */,
 				FD894A29298A2616003E759D /* Entities */,
 				9BE32DF42993820E002C1D86 /* Domain */,
-				9BE32DF6299382F5002C1D86 /* SupportFiles */,
 				9B445DAA2994C79B00EE436E /* Extension */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
 				9B445DAF2994C96800EE436E /* Resources */,
+				9BE32DF6299382F5002C1D86 /* SupportFiles */,
 			);
 			path = galpi;
 			sourceTree = "<group>";
