@@ -16,7 +16,7 @@ struct TabBarContainerView: View {
     }
     
     var body: some View {
-        TabView(selection: $selectionTagIndex) {
+        TabView(selection: $selectedTagIndex) {
             GalpiGridView()
                 .tabItem {
                     Text("GALPI")
