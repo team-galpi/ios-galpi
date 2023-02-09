@@ -32,6 +32,7 @@ struct TabBarContainerView: View {
                 .toolbarBackground(.black, for: .tabBar)
                 .tag(1)
         }
+        .accentColor(.white)
     }
     
 }
