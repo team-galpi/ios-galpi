@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBarContainerView: View {
     
-    @State private var selectionTagIndex: Int = 0
+    @State private var selectedTagIndex: Int = 0
     
     init() {
         UITabBar.appearance().backgroundColor = .black
