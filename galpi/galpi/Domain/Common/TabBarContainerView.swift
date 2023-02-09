@@ -9,8 +9,23 @@ import SwiftUI
 
 struct TabBarContainerView: View {
     
+    @State private var selectionTagIndex: Int = 0
+    
     var body: some View {
-        Text("")
+        TabView(selection: $selectionTagIndex) {
+            GalpiGridView()
+                .tabItem {
+                    Text("GALPI")
+                }
+                .tag(0)
+            
+            // TODO: MYPAGE 구현 후 연결하기
+            Color.cyan
+                .tabItem {
+                    Text("MYPAGE")
+                }
+                .tag(1)
+        }
     }
     
 }
