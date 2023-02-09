@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B445DA92994C6E700EE436E /* GDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DA82994C6E700EE436E /* GDS.swift */; };
 		9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAB2994C7BF00EE436E /* Color+Extension.swift */; };
-		9B445DAE2994C88E00EE436E /* Font.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAD2994C88E00EE436E /* Font.Extension.swift */; };
+		9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAD2994C88E00EE436E /* Font+Extension.swift */; };
+		9B445DE52994ECD600EE436E /* JejuMyeongjoOTF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9B445DE42994ECD600EE436E /* JejuMyeongjoOTF.otf */; };
 		9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EA29892B6200F317FD /* GalpiPostView.swift */; };
 		9B5320ED29892B8900F317FD /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EC29892B8900F317FD /* FieldView.swift */; };
 		9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EE29892BA700F317FD /* TextLineView.swift */; };
@@ -45,8 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B445DA82994C6E700EE436E /* GDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDS.swift; sourceTree = "<group>"; };
 		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		9B445DAD2994C88E00EE436E /* Font.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.Extension.swift; sourceTree = "<group>"; };
+		9B445DAD2994C88E00EE436E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		9B445DE42994ECD600EE436E /* JejuMyeongjoOTF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JejuMyeongjoOTF.otf; sourceTree = "<group>"; };
 		9B5320EA29892B6200F317FD /* GalpiPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostView.swift; sourceTree = "<group>"; };
 		9B5320EC29892B8900F317FD /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 		9B5320EE29892BA700F317FD /* TextLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLineView.swift; sourceTree = "<group>"; };
@@ -93,13 +97,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B445DA52994C69D00EE436E /* GDS */ = {
+			isa = PBXGroup;
+			children = (
+				9B445DA82994C6E700EE436E /* GDS.swift */,
+			);
+			path = GDS;
+			sourceTree = "<group>";
+		};
 		9B445DAA2994C79B00EE436E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				9B445DAB2994C7BF00EE436E /* Color+Extension.swift */,
-				9B445DAD2994C88E00EE436E /* Font.Extension.swift */,
+				9B445DAD2994C88E00EE436E /* Font+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9B445DAF2994C96800EE436E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B445DB02994C99300EE436E /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9B445DB02994C99300EE436E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9B445DEC2994F63D00EE436E /* JejuMyeongjo */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		9B445DEC2994F63D00EE436E /* JejuMyeongjo */ = {
+			isa = PBXGroup;
+			children = (
+				9B445DE42994ECD600EE436E /* JejuMyeongjoOTF.otf */,
+			);
+			path = JejuMyeongjo;
 			sourceTree = "<group>";
 		};
 		9B5320E929892B4400F317FD /* GalpiPost */ = {
@@ -153,6 +189,7 @@
 			children = (
 				FD894A2229897C39003E759D /* MockCenter.swift */,
 				FD8949F02988FFE3003E759D /* galpi */,
+				9B445DA52994C69D00EE436E /* GDS */,
 				FD894A012988FFE5003E759D /* galpiTests */,
 				FD894A0B2988FFE5003E759D /* galpiUITests */,
 				FD8949EF2988FFE3003E759D /* Products */,
@@ -178,6 +215,7 @@
 				9BE32DF6299382F5002C1D86 /* SupportFiles */,
 				9B445DAA2994C79B00EE436E /* Extension */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
+				9B445DAF2994C96800EE436E /* Resources */,
 			);
 			path = galpi;
 			sourceTree = "<group>";
@@ -330,6 +368,7 @@
 			files = (
 				FD8949F92988FFE5003E759D /* Preview Assets.xcassets in Resources */,
 				FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */,
+				9B445DE52994ECD600EE436E /* JejuMyeongjoOTF.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +393,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B445DA92994C6E700EE436E /* GDS.swift in Sources */,
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
-				9B445DAE2994C88E00EE436E /* Font.Extension.swift in Sources */,
+				9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
