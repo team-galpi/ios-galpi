@@ -13,5 +13,9 @@ extension Font {
         return Font.custom("JejuMyeongjoOTF", size: size)
     }
     
+    static func koPubBaTangMedium(size: CGFloat) -> Font {
+        return Font.custom("KoPubBatangMedium", size: size)
+    }
+    
     
 }
