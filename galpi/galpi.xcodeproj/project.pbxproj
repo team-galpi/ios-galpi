@@ -36,6 +36,7 @@
 		FDA7E4A3299829070040F0A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A2299829070040F0A3 /* FirebaseAnalyticsSwift */; };
 		FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A4299829070040F0A3 /* FirebaseAuth */; };
 		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
+		FDA7E4AA2999358C0040F0A3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FD894A252989AEC3003E759D /* Galpi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galpi.swift; sourceTree = "<group>"; };
 		FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
+				FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
+				FDA7E4AA2999358C0040F0A3 /* AuthenticationViewModel.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
