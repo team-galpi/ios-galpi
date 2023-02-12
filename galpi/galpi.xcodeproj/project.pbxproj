@@ -35,6 +35,7 @@
 		FDA7E4A1299829070040F0A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A0299829070040F0A3 /* FirebaseAnalytics */; };
 		FDA7E4A3299829070040F0A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A2299829070040F0A3 /* FirebaseAnalyticsSwift */; };
 		FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A4299829070040F0A3 /* FirebaseAuth */; };
+		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		FD894A2229897C39003E759D /* MockCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCenter.swift; sourceTree = "<group>"; };
 		FD894A252989AEC3003E759D /* Galpi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galpi.swift; sourceTree = "<group>"; };
 		FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5F78BB2995731500075C7D /* Common */,
+				FDA7E4A62999303B0040F0A3 /* Login */,
 				FD894A1B298908CD003E759D /* GalpiGrid */,
 				9B5320E929892B4400F317FD /* GalpiPost */,
 			);
@@ -297,6 +300,14 @@
 				FD894A252989AEC3003E759D /* Galpi.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		FDA7E4A62999303B0040F0A3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +462,7 @@
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
+				FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
