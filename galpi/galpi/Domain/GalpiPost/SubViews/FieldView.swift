@@ -21,13 +21,14 @@ struct FieldView: View {
         VStack(alignment: alignment) {
             Spacer()
             Text(title)
-                .font(.caption)
-                .foregroundColor(.gray)
+                .font(.jejuMyeongjo(size: 15))
+                .foregroundColor(GDS.AppColor.GrayScale.gray205)
                 .frame(minWidth: width, minHeight: 20, alignment: .topLeading)
                 .multilineTextAlignment(.leading)
             TextField(text: $label, axis: .vertical) {
             }
-            .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+            .font(.jejuMyeongjo(size: 15))
+            .foregroundColor(GDS.AppColor.GrayScale.gray34)
             .lineLimit(lineLimit)
             .frame(minWidth: width - 10, maxHeight: 50)
             .onTapGesture {

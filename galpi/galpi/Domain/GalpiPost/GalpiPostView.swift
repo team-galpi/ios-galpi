@@ -70,8 +70,8 @@ struct GalpiPostView: View {
                         VStack(alignment: .leading) {
                             Spacer()
                             Text("date")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                                .font(.jejuMyeongjo(size: 15))
+                                .foregroundColor(GDS.AppColor.GrayScale.gray205)
                                 .frame(minWidth: AppConstraints.tripartitionWidth, minHeight: 20, alignment: .topLeading)
                                 .multilineTextAlignment(.leading)
                             Button {
@@ -79,6 +79,8 @@ struct GalpiPostView: View {
                             } label: {
                                 Text(self.formatDateToString(date: viewModel.galpi.date))
                                     .frame(alignment: .leading)
+                                    .font(.jejuMyeongjo(size: 15))
+                                    .foregroundColor(GDS.AppColor.GrayScale.gray34)
                             }
                             .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
                             .frame(minWidth: AppConstraints.tripartitionWidth, maxHeight: 50, alignment: .leading)
@@ -112,14 +114,16 @@ struct GalpiPostView: View {
                         Spacer(minLength: 20)
                         VStack(alignment: .leading) {
                             Text("quotes")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                                .font(.jejuMyeongjo(size: 15))
+                                .foregroundColor(GDS.AppColor.GrayScale.gray205)
                             if viewModel.galpi.quotes.isEmpty {
                                 Button {
                                     self.isQuotesPresented.toggle()
                                 } label: {
                                     VStack(alignment: .leading) {
                                         Text(viewModel.galpi.quotes)
+                                            .font(.jejuMyeongjo(size: 15))
+                                            .foregroundColor(GDS.AppColor.GrayScale.gray34)
                                         Rectangle()
                                             .frame(width: AppConstraints.width, height: 25)
                                             .foregroundColor(.clear)
@@ -140,9 +144,10 @@ struct GalpiPostView: View {
                                             .frame(width: AppConstraints.width, height: 5)
                                             .foregroundColor(.clear)
                                         Text(viewModel.galpi.quotes)
+                                            .font(.jejuMyeongjo(size: 15))
                                             .frame(width: AppConstraints.width, alignment: .leading)
                                             .multilineTextAlignment(.leading)
-                                            .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+                                            .foregroundColor(GDS.AppColor.GrayScale.gray34)
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
@@ -164,8 +169,8 @@ struct GalpiPostView: View {
                         
                         VStack(alignment: .leading) {
                             Text("opinion")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                                .font(.jejuMyeongjo(size: 15))
+                                .foregroundColor(GDS.AppColor.GrayScale.gray205)
                             Spacer(minLength: 40)
                             if viewModel.galpi.opinion.isEmpty {
                                 Button {
@@ -188,7 +193,8 @@ struct GalpiPostView: View {
                                     self.isOpinionPresented.toggle()
                                 } label: {
                                     Text(viewModel.galpi.opinion)
-                                        .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
+                                        .font(.jejuMyeongjo(size: 15))
+                                        .foregroundColor(GDS.AppColor.GrayScale.gray34)
                                         .frame(width: AppConstraints.width, alignment: .leading)
                                         .multilineTextAlignment(.leading)
                                 }
