@@ -12,6 +12,9 @@ struct LoginView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    // TODO: viewModel 주입
+    let viewModel = AuthenticationViewModel()
+    
     var body: some View {
         signInWithAppleButton()
             .frame(width: 240, height: 50)
@@ -23,7 +26,7 @@ extension LoginView {
     
     private func signInWithAppleButton() -> some View {
         SignInWithAppleButton(.signIn) { request in
-            
+            viewModel.handleSignInWithAppleRequest(request)
         } onCompletion: { result in
 
         }

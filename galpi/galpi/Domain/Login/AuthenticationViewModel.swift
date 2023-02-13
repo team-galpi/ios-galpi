@@ -7,9 +7,25 @@
 
 import Foundation
 import CryptoKit
+import AuthenticationServices
 
 final class AuthenticationViewModel: ObservableObject {
     
+    private var currentNonce: String?
+
+}
+
+extension AuthenticationViewModel {
+    
+    func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
+        request.requestedScopes = [.fullName]
+        let nonce = randomNonceString()
+        currentNonce = nonce
+        request.nonce = sha256(nonce)
+    }
+    
+}
+
 private extension AuthenticationViewModel {
     
     func randomNonceString(length: Int = 32) -> String {
