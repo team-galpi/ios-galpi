@@ -20,6 +20,7 @@
 		9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320EE29892BA700F317FD /* TextLineView.swift */; };
 		9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */; };
 		9B62ED822996230B0069A38E /* GalpiReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B62ED812996230B0069A38E /* GalpiReadView.swift */; };
+		9B62ED85299627860069A38E /* GalpiReadTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B62ED84299627860069A38E /* GalpiReadTopBarView.swift */; };
 		9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */; };
 		9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */; };
 		FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F78BC2995731500075C7D /* TabBarContainerView.swift */; };
@@ -66,6 +67,7 @@
 		9B5320EE29892BA700F317FD /* TextLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLineView.swift; sourceTree = "<group>"; };
 		9B5320F129895F3000F317FD /* GalpiPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiPostViewModel.swift; sourceTree = "<group>"; };
 		9B62ED812996230B0069A38E /* GalpiReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiReadView.swift; sourceTree = "<group>"; };
+		9B62ED84299627860069A38E /* GalpiReadTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiReadTopBarView.swift; sourceTree = "<group>"; };
 		9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiTextEditorView.swift; sourceTree = "<group>"; };
 		9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FD5F78BC2995731500075C7D /* TabBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		9B62ED83299627620069A38E /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				9B62ED84299627860069A38E /* GalpiReadTopBarView.swift */,
 				9B3F0EFF299A72830035A7DA /* DescriptionView.swift */,
 			);
 			path = SubViews;
@@ -461,6 +464,7 @@
 				9B62ED822996230B0069A38E /* GalpiReadView.swift in Sources */,
 				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
+				9B62ED85299627860069A38E /* GalpiReadTopBarView.swift in Sources */,
 				9B3F0F00299A72830035A7DA /* DescriptionView.swift in Sources */,
 				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
 			);
