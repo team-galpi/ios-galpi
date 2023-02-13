@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		9B31CBBB29969B00009AABF5 /* GalpiReadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiReadViewModel.swift; sourceTree = "<group>"; };
 		9B3F0EFF299A72830035A7DA /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		9B3F0F01299A91E30035A7DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B445DA62994C6C600EE436E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9B445DA82994C6E700EE436E /* GDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDS.swift; sourceTree = "<group>"; };
 		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		9BE32DF6299382F5002C1D86 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				9B3F0F01299A91E30035A7DA /* Info.plist */,
 				FD8949F52988FFE5003E759D /* Assets.xcassets */,
 			);
 			path = SupportFiles;
@@ -632,6 +634,7 @@
 				DEVELOPMENT_TEAM = 4K2FDLWHBL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = galpi/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -661,6 +664,7 @@
 				DEVELOPMENT_TEAM = 4K2FDLWHBL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = galpi/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
