@@ -6,8 +6,11 @@
 //
 
 import Foundation
+
 import CryptoKit
 import AuthenticationServices
+
+import FirebaseAuth
 
 final class AuthenticationViewModel: ObservableObject {
     
@@ -27,9 +30,25 @@ extension AuthenticationViewModel {
     func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         switch result {
         case .success(let asAuth):
-            if let appleIDCredential = asAuth.credential as? ASAuthorizationAppleIDCredential {
-                print(appleIDCredential.user)
+            guard let appleIDCredential = asAuth.credential as? ASAuthorizationAppleIDCredential else {
+                return
             }
+            
+            guard let nonce = currentNonce else {
+                fatalError("Invalid state: a login callback was received, but no login request was sent.")
+            }
+            
+            guard let appleIDToken = appleIDCredential.identityToken,
+                  let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                print("Unable to fetch identify token or Unable to serialise token string from data")
+                return
+            }
+            
+            let credential = OAuthProvider.credential(
+                withProviderID: "apple.com",
+                idToken: idTokenString,
+                rawNonce: nonce
+            )
         case .failure(let failure):
             // TODO: 에러 핸들링
             print(failure)
