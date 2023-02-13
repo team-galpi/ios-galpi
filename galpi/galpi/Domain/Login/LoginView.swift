@@ -28,7 +28,7 @@ extension LoginView {
         SignInWithAppleButton(.signIn) { request in
             viewModel.handleSignInWithAppleRequest(request)
         } onCompletion: { result in
-
+            viewModel.handleSignInWithAppleCompletion(result)
         }
         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
         .frame(maxWidth: .infinity, minHeight: 50)

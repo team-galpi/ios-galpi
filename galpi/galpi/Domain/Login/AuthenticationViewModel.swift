@@ -24,6 +24,18 @@ extension AuthenticationViewModel {
         request.nonce = sha256(nonce)
     }
     
+    func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
+        switch result {
+        case .success(let asAuth):
+            if let appleIDCredential = asAuth.credential as? ASAuthorizationAppleIDCredential {
+                print(appleIDCredential.user)
+            }
+        case .failure(let failure):
+            // TODO: 에러 핸들링
+            print(failure)
+        }
+    }
+    
 }
 
 private extension AuthenticationViewModel {
