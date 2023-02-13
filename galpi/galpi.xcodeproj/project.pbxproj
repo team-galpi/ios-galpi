@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B3F0F00299A72830035A7DA /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3F0EFF299A72830035A7DA /* DescriptionView.swift */; };
 		9B445DA72994C6C600EE436E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DA62994C6C600EE436E /* Color.swift */; };
 		9B445DA92994C6E700EE436E /* GDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DA82994C6E700EE436E /* GDS.swift */; };
 		9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B445DAB2994C7BF00EE436E /* Color+Extension.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B3F0EFF299A72830035A7DA /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		9B445DA62994C6C600EE436E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9B445DA82994C6E700EE436E /* GDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDS.swift; sourceTree = "<group>"; };
 		9B445DAB2994C7BF00EE436E /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		9B62ED83299627620069A38E /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				9B3F0EFF299A72830035A7DA /* DescriptionView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				9B62ED822996230B0069A38E /* GalpiReadView.swift in Sources */,
 				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
+				9B3F0F00299A72830035A7DA /* DescriptionView.swift in Sources */,
 				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
