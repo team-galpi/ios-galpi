@@ -64,7 +64,7 @@ struct GalpiPostView: View {
                             width: AppConstraints.width
                             - AppConstraints.tripartitionWidth,
                             alignment: .leading,
-                            label: $viewModel.title
+                            label: $viewModel.galpi.title
                         )
                         
                         VStack(alignment: .leading) {
@@ -77,7 +77,7 @@ struct GalpiPostView: View {
                             Button {
                                 isDatePickerPresented.toggle()
                             } label: {
-                                Text(self.formatDateToString(date: viewModel.date))
+                                Text(self.formatDateToString(date: viewModel.galpi.date))
                                     .frame(alignment: .leading)
                             }
                             .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
@@ -95,14 +95,14 @@ struct GalpiPostView: View {
                             width: AppConstraints.width
                             - AppConstraints.tripartitionWidth,
                             alignment: .leading,
-                            label: $viewModel.author
+                            label: $viewModel.galpi.author
                         )
                         FieldView(
                             title: "publisher",
                             lineLimit: 2,
                             width: AppConstraints.tripartitionWidth,
                             alignment: .leading,
-                            label: $viewModel.publisher
+                            label: $viewModel.galpi.publisher
                         )
                         Spacer(minLength: 20)
                     }
@@ -114,20 +114,20 @@ struct GalpiPostView: View {
                             Text("quotes")
                                 .font(.caption)
                                 .foregroundColor(.gray)
-                            if viewModel.quotes.isEmpty {
+                            if viewModel.galpi.quotes.isEmpty {
                                 Button {
                                     self.isQuotesPresented.toggle()
                                 } label: {
                                     VStack(alignment: .leading) {
-                                        Text(viewModel.quotes)
+                                        Text(viewModel.galpi.quotes)
                                         Rectangle()
                                             .frame(width: AppConstraints.width, height: 25)
                                             .foregroundColor(.clear)
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", description: viewModel.quotes) { description in
-                                        viewModel.quotes = description
+                                    GalpiTextEditorView(title: "quotes", description: viewModel.galpi.quotes) { description in
+                                        viewModel.galpi.quotes = description
                                     }
                                 }
                                 TextLineView(numberOfLines: 1)
@@ -139,15 +139,15 @@ struct GalpiPostView: View {
                                         Rectangle()
                                             .frame(width: AppConstraints.width, height: 5)
                                             .foregroundColor(.clear)
-                                        Text(viewModel.quotes)
+                                        Text(viewModel.galpi.quotes)
                                             .frame(width: AppConstraints.width, alignment: .leading)
                                             .multilineTextAlignment(.leading)
                                             .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", description: viewModel.quotes) { description in
-                                        viewModel.quotes = description
+                                    GalpiTextEditorView(title: "quotes", description: viewModel.galpi.quotes) { description in
+                                        viewModel.galpi.quotes = description
                                     }
                                 }
                                 Rectangle()
@@ -167,7 +167,7 @@ struct GalpiPostView: View {
                                 .font(.caption)
                                 .foregroundColor(.gray)
                             Spacer(minLength: 40)
-                            if viewModel.opinion.isEmpty {
+                            if viewModel.galpi.opinion.isEmpty {
                                 Button {
                                     self.isOpinionPresented.toggle()
                                 } label: {
@@ -178,16 +178,16 @@ struct GalpiPostView: View {
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
                                     GalpiTextEditorView(
                                         title: "opinion",
-                                        description: viewModel.opinion
+                                        description: viewModel.galpi.opinion
                                     ) { description in
-                                        viewModel.opinion = description
+                                        viewModel.galpi.opinion = description
                                     }
                                 }
                             } else {
                                 Button {
                                     self.isOpinionPresented.toggle()
                                 } label: {
-                                    Text(viewModel.opinion)
+                                    Text(viewModel.galpi.opinion)
                                         .foregroundColor(Color(UIColor(red: 88/255, green: 88/255, blue: 88/255, alpha: 1)))
                                         .frame(width: AppConstraints.width, alignment: .leading)
                                         .multilineTextAlignment(.leading)
@@ -195,9 +195,9 @@ struct GalpiPostView: View {
                                 .fullScreenCover(isPresented: $isOpinionPresented) {
                                     GalpiTextEditorView(
                                         title: "opinion",
-                                        description: viewModel.opinion
+                                        description: viewModel.galpi.opinion
                                     ) { description in
-                                        viewModel.opinion = description
+                                        viewModel.galpi.opinion = description
                                     }
                                 }
                             }
@@ -207,7 +207,7 @@ struct GalpiPostView: View {
                 }
             }
             if isDatePickerPresented {
-                CalendarView(date: $viewModel.date, isPresented: $isDatePickerPresented)
+                CalendarView(date: $viewModel.galpi.date, isPresented: $isDatePickerPresented)
             }
         }
     }

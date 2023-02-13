@@ -9,21 +9,12 @@ import Foundation
 
 final class GalpiPostViewModel: ObservableObject {
     
-    @Published var title: String
-    @Published var date: Date = Date()
-    @Published var author: String
-    @Published var publisher: String
-    @Published var quotes: String = ""
-    @Published var opinion: String = ""
+    @Published var galpi: Galpi
     
     init(
-        title: String = "",
-        author: String = "",
-        publisher: String = ""
+        galpi: Galpi = Galpi()
     ) {
-        self.title = title
-        self.author = author
-        self.publisher = publisher
+        self.galpi = galpi
     }
     
     func createGalpi() {
