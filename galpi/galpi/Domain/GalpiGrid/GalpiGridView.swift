@@ -45,9 +45,7 @@ private extension GalpiGridView {
                     }
                     .navigationDestination(for: Galpi.self) { galpi in
                         VStack {
-                            // TODO: 작성해놓은 갈피를 조회할 수 있는 GalpiReadView 띄우기
-                            Text(galpi.title)
-                            Image(galpi.image)
+                            GalpiReadView(viewModel: GalpiReadViewModel(galpi: galpi))
                         }
                     }
                 }
