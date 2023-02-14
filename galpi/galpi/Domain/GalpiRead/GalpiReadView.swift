@@ -30,7 +30,7 @@ struct GalpiReadView<ViewModel>: View where ViewModel: GalpiReadViewModelInterfa
                                         
                     DescriptionView(
                         title: "date",
-                        description: viewModel.output.galpi.date.description,
+                        description: viewModel.output.galpi.date.formatDateToString(),
                         width: AppConstraints.tripartitionWidth
                     )
                     

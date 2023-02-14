@@ -77,7 +77,7 @@ struct GalpiPostView: View {
                             Button {
                                 isDatePickerPresented.toggle()
                             } label: {
-                                Text(self.formatDateToString(date: viewModel.galpi.date))
+                                Text(viewModel.galpi.date.formatDateToString())
                                     .frame(alignment: .leading)
                                     .font(.jejuMyeongjo(size: 15))
                                     .foregroundColor(GDS.AppColor.GrayScale.gray34)
@@ -216,12 +216,6 @@ struct GalpiPostView: View {
                 CalendarView(date: $viewModel.galpi.date, isPresented: $isDatePickerPresented)
             }
         }
-    }
-    
-    private func formatDateToString(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy.MM.dd"
-        return dateFormatter.string(from: date)
     }
     
 }
