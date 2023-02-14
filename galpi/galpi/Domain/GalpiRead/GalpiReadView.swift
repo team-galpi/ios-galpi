@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct GalpiReadView: View {
+struct GalpiReadView<ViewModel>: View where ViewModel: GalpiReadViewModelInterface {
     
-    @StateObject private var viewModel = GalpiReadViewModel()
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,7 +21,7 @@ struct GalpiReadView: View {
                     
                     DescriptionView(
                         title: "title",
-                        description: viewModel.galpi.title,
+                        description: viewModel.output.galpi.title,
                         width: AppConstraints.width - AppConstraints.tripartitionWidth - 45
                     )
                     
@@ -30,7 +30,7 @@ struct GalpiReadView: View {
                                         
                     DescriptionView(
                         title: "date",
-                        description: viewModel.galpi.date.description,
+                        description: viewModel.output.galpi.date.description,
                         width: AppConstraints.tripartitionWidth
                     )
                     
@@ -45,7 +45,7 @@ struct GalpiReadView: View {
                     
                     DescriptionView(
                         title: "author",
-                        description: viewModel.galpi.author,
+                        description: viewModel.output.galpi.author,
                         width: AppConstraints.width - AppConstraints.tripartitionWidth - 45
                     )
                     
@@ -54,7 +54,7 @@ struct GalpiReadView: View {
                     
                     DescriptionView(
                         title: "publisher",
-                        description: viewModel.galpi.publisher,
+                        description: viewModel.output.galpi.publisher,
                         width: AppConstraints.tripartitionWidth
                     )
                     
@@ -69,7 +69,7 @@ struct GalpiReadView: View {
                     
                     DescriptionView(
                         title: "quotes",
-                        description: viewModel.galpi.quotes,
+                        description: viewModel.output.galpi.quotes,
                         width: AppConstraints.width - 15
                     )
                     
@@ -86,7 +86,7 @@ struct GalpiReadView: View {
                     
                     DescriptionView(
                         title: "opinion",
-                        description: viewModel.galpi.opinion,
+                        description: viewModel.output.galpi.opinion,
                         width: AppConstraints.width - 15
                     )
                     
