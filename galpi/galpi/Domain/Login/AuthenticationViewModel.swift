@@ -44,11 +44,20 @@ extension AuthenticationViewModel {
                 return
             }
             
-            let credential = OAuthProvider.credential(
+            let firebaseAuthCredential = OAuthProvider.credential(
                 withProviderID: "apple.com",
                 idToken: idTokenString,
                 rawNonce: nonce
             )
+            
+            Task {
+                do {
+                    try await Auth.auth().signIn(with: firebaseAuthCredential)
+                }
+                catch {
+                    print("Error authenticating: \(error.localizedDescription)")
+                }
+            }
         case .failure(let failure):
             // TODO: 에러 핸들링
             print(failure)
