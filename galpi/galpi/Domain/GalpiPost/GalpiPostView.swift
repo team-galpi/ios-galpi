@@ -15,10 +15,10 @@ enum AppConstraints {
     static let tripartitionWidth = width / 3
 }
 
-struct GalpiPostView: View {
+struct GalpiPostView<ViewModel>: View where ViewModel: GalpiPostViewModelInterface {
     
     @Environment(\.dismiss) private var dismiss
-    @StateObject var viewModel: GalpiPostViewModel
+    @ObservedObject var viewModel: ViewModel
     @State private var isQuotesPresented: Bool = false
     @State private var isOpinionPresented: Bool = false
     @State private var isDatePickerPresented: Bool = false
@@ -45,7 +45,7 @@ struct GalpiPostView: View {
                         Spacer()
                         Button {
                             completion(false)
-                            viewModel.createGalpi()
+                            viewModel.tapDoneButton()
                             dismiss()
                         } label: {
                             Text("Done")

@@ -7,54 +7,37 @@
 
 import Foundation
 
-protocol GalpiReadViewModelInputInterface: AnyObject {
+final class GalpiReadViewModel: ObservableObject {
     
-    func tapDismissButton()
-    func tapEditModeButton()
+    var action: Action
+    var state: State
     
-}
-
-protocol GalpiReadViewModelOutputInterface: AnyObject {
-    
-    var galpi: Galpi { get set }
-    var isEditModeViewPresented: Bool { get set }
-    
-}
-
-protocol GalpiReadViewModelInterface: AnyObject, ObservableObject {
-    
-    var input: GalpiReadViewModelInputInterface { get }
-    var output: GalpiReadViewModelOutputInterface { get set }
-    
-}
-
-final class GalpiReadViewModel: ObservableObject, GalpiReadViewModelInterface, GalpiReadViewModelOutputInterface {
-    
-    var input: GalpiReadViewModelInputInterface { self }
-    var output: GalpiReadViewModelOutputInterface {
-        get {
-            return self
+    class Action {
+        
+        weak var state: State?
+        
+        func tapEditModeButton() {
+            state?.isEditModeViewPresented.toggle()
         }
-        set(output) {
-            self.galpi = output.galpi
-            self.output.isEditModeViewPresented = output.isEditModeViewPresented
+        
+        init(output: State) {
+            self.state = output
+        }
+    }
+    
+    class State {
+        @Published var galpi: Galpi
+        @Published var isEditModeViewPresented: Bool = false
+        @Published var isDismiss: Bool = false
+        
+        init(galpi: Galpi) {
+            self.galpi = galpi
         }
     }
 
-    @Published var galpi: Galpi = dummyGalpis[0]
-    @Published var isEditModeViewPresented: Bool = false
-    @Published var isDismiss: Bool = false
-    
-}
-
-extension GalpiReadViewModel: GalpiReadViewModelInputInterface {
-    
-    func tapDismissButton() {
-        isDismiss.toggle()
-    }
-    
-    func tapEditModeButton() {
-        isEditModeViewPresented.toggle()
+    init(galpi: Galpi) {
+        self.state = State(galpi: galpi)
+        self.action = Action(output: self.state)
     }
     
 }

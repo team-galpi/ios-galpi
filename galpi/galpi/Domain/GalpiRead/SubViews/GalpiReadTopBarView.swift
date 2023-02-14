@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct GalpiReadTopBarView<ViewModel>: View where ViewModel: GalpiReadViewModelInterface {
+struct GalpiReadTopBarView: View {
     
-    @ObservedObject var viewModel: ViewModel
+    @Environment(\.dismiss) private var dismiss
+    @ObservedObject var viewModel: GalpiReadViewModel
     
     var body: some View {
         HStack {
             Button {
-                viewModel.input.tapDismissButton()
+                dismiss()
             } label: {
                 Image(systemName: "xmark")
                     .padding(20)
@@ -26,7 +27,7 @@ struct GalpiReadTopBarView<ViewModel>: View where ViewModel: GalpiReadViewModelI
             Spacer()
             
             Button {
-                viewModel.input.tapEditModeButton()
+                viewModel.action.tapEditModeButton()
             } label: {
                 Image(systemName: "pencil.tip")
                     .padding(20)
@@ -34,8 +35,13 @@ struct GalpiReadTopBarView<ViewModel>: View where ViewModel: GalpiReadViewModelI
                     .fontWeight(.thin)
                     .foregroundColor(GDS.AppColor.GrayScale.gray88)
             }
-            .fullScreenCover(isPresented: $viewModel.output.isEditModeViewPresented) {
-                GalpiPostView(viewModel: GalpiPostViewModel(galpi: viewModel.output.galpi)) { isDismiss in
+            .fullScreenCover(
+                isPresented: $viewModel.state.isEditModeViewPresented
+            ) {
+                GalpiPostView(
+                    viewModel: GalpiPostViewModel(
+                        galpi: viewModel.state.galpi
+                    )) { isDismiss in
                 }
             }
         }
