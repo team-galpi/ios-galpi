@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class GalpiEditViewModel: ObservableObject, GalpiPostViewModelInterface {
+final class GalpiEditViewModel: ObservableObject {
     var galpi: Galpi
     
     init(galpi: Galpi) {
