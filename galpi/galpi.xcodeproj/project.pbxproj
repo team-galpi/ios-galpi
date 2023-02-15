@@ -23,6 +23,8 @@
 		9B62ED822996230B0069A38E /* GalpiReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B62ED812996230B0069A38E /* GalpiReadView.swift */; };
 		9B62ED85299627860069A38E /* GalpiReadTopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B62ED84299627860069A38E /* GalpiReadTopBarView.swift */; };
 		9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */; };
+		9BE417BA299B492F00BB7DD5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE417B9299B492F00BB7DD5 /* Date+Extension.swift */; };
+		9BE417BC299B9DE700BB7DD5 /* GalpiEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE417BB299B9DE700BB7DD5 /* GalpiEditViewModel.swift */; };
 		9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */; };
 		FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F78BC2995731500075C7D /* TabBarContainerView.swift */; };
 		FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8949F12988FFE3003E759D /* galpiApp.swift */; };
@@ -72,6 +74,8 @@
 		9B62ED812996230B0069A38E /* GalpiReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiReadView.swift; sourceTree = "<group>"; };
 		9B62ED84299627860069A38E /* GalpiReadTopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiReadTopBarView.swift; sourceTree = "<group>"; };
 		9BB2220A298EBB4F00C25038 /* GalpiTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiTextEditorView.swift; sourceTree = "<group>"; };
+		9BE417B9299B492F00BB7DD5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9BE417BB299B9DE700BB7DD5 /* GalpiEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiEditViewModel.swift; sourceTree = "<group>"; };
 		9BE87B3A2990E6E8002A1B4E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		FD5F78BC2995731500075C7D /* TabBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarContainerView.swift; sourceTree = "<group>"; };
 		FD8949EE2988FFE3003E759D /* galpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = galpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,7 @@
 			children = (
 				9B445DAB2994C7BF00EE436E /* Color+Extension.swift */,
 				9B445DAD2994C88E00EE436E /* Font+Extension.swift */,
+				9BE417B9299B492F00BB7DD5 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				9B62ED83299627620069A38E /* SubViews */,
 				9B62ED812996230B0069A38E /* GalpiReadView.swift */,
 				9B31CBBB29969B00009AABF5 /* GalpiReadViewModel.swift */,
+				9BE417BB299B9DE700BB7DD5 /* GalpiEditViewModel.swift */,
 			);
 			path = GalpiRead;
 			sourceTree = "<group>";
@@ -461,9 +467,11 @@
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
+				9BE417BC299B9DE700BB7DD5 /* GalpiEditViewModel.swift in Sources */,
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
+				9BE417BA299B492F00BB7DD5 /* Date+Extension.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
@@ -631,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
-				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				DEVELOPMENT_TEAM = RUFP7D8BXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = galpi/SupportFiles/Info.plist;
@@ -640,6 +648,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -661,7 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
-				DEVELOPMENT_TEAM = 4K2FDLWHBL;
+				DEVELOPMENT_TEAM = RUFP7D8BXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = galpi/SupportFiles/Info.plist;
@@ -670,6 +679,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
