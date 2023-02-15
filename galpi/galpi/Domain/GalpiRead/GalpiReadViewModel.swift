@@ -20,8 +20,8 @@ final class GalpiReadViewModel: ObservableObject {
             state?.isEditModeViewPresented.toggle()
         }
         
-        init(output: State) {
-            self.state = output
+        init(state: State) {
+            self.state = state
         }
     }
     
@@ -37,7 +37,7 @@ final class GalpiReadViewModel: ObservableObject {
 
     init(galpi: Galpi) {
         self.state = State(galpi: galpi)
-        self.action = Action(output: self.state)
+        self.action = Action(state: self.state)
     }
     
 }
