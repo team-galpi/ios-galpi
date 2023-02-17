@@ -12,9 +12,12 @@ import FirebaseAuth
 final class AppleLoginManager: NSObject {
     
     private let nonce = AuthSecurityService().randomNonceString()
+    private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?
     
-    func startSignInWithAppleFlow() {
+    func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void) {
         configureAuthorizationController()
+        
+        signInCompletion = completion
     }
     
     private func configureAuthorizationController() {
@@ -46,22 +49,9 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
           print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
           return
         }
-        // Initialize a Firebase credential.
-        let credential = OAuthProvider.credential(withProviderID: "apple.com",
-                                                  idToken: idTokenString,
-                                                  rawNonce: nonce)
-        // Sign in with Firebase.
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-          if let error {
-            // Error. If error.code == .MissingOrInvalidNonce, make sure
-            // you're sending the SHA256-hashed nonce as a hex string with
-            // your request to Apple.
-            print(error.localizedDescription)
-            return
-          }
-          // User is signed in to Firebase with Apple.
-          // ...
-        }
+        
+        let appleLoginCredential = SocialLoginCredential(providerID: "apple.com", token: idTokenString, nonce: nonce)
+        signInCompletion?(.success(appleLoginCredential))
       }
     }
 
