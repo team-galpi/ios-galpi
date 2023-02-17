@@ -11,20 +11,14 @@ import FirebaseAuth
 
 final class AppleLoginManager: NSObject {
     
-    private var currentNonce: String?
+    private let nonce = AuthSecurityService().randomNonceString()
     
     func startSignInWithAppleFlow() {
-        let nonce = AuthSecurityService().randomNonceString()
-        currentNonce = nonce
-        
         configureAuthorizationController()
     }
     
     private func configureAuthorizationController() {
-        guard let currentNonce = currentNonce else {
-            return
-        }
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request(with: currentNonce)])
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request(with: nonce)])
         authorizationController.delegate = self
         authorizationController.performRequests()
     }
@@ -44,9 +38,6 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
       if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-        guard let nonce = currentNonce else {
-          fatalError("Invalid state: A login callback was received, but no login request was sent.")
-        }
         guard let appleIDToken = appleIDCredential.identityToken else {
           print("Unable to fetch identity token")
           return
