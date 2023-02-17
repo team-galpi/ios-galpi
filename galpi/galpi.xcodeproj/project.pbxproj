@@ -40,6 +40,7 @@
 		FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */; };
 		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
 		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
+		FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginCredential.swift; sourceTree = "<group>"; };
 		FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecurityService.swift; sourceTree = "<group>"; };
 		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5F78BC2995731500075C7D /* TabBarContainerView.swift */,
+				FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
 				FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */,
+				FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
 				FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
