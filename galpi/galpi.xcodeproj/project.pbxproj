@@ -38,6 +38,7 @@
 		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
 		FDA7E4AA2999358C0040F0A3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */; };
 		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
+		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecurityService.swift; sourceTree = "<group>"; };
+		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
 				FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */,
 				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
+				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
 				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
+				FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
