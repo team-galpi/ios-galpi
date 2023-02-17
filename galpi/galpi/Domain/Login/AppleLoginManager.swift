@@ -40,24 +40,23 @@ final class AppleLoginManager: NSObject {
 extension AppleLoginManager: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-      if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-        guard let appleIDToken = appleIDCredential.identityToken else {
-          print("Unable to fetch identity token")
-          return
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            guard let appleIDToken = appleIDCredential.identityToken else {
+                print("Unable to fetch identity token")
+                return
+            }
+            guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                return
+            }
+            
+            let appleLoginCredential = SocialLoginCredential(providerID: "apple.com", token: idTokenString, nonce: nonce)
+            signInCompletion?(.success(appleLoginCredential))
         }
-        guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-          print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
-          return
-        }
-        
-        let appleLoginCredential = SocialLoginCredential(providerID: "apple.com", token: idTokenString, nonce: nonce)
-        signInCompletion?(.success(appleLoginCredential))
-      }
     }
-
+    
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-      // Handle error.
-      print("Sign in with Apple errored: \(error)")
+        print("Sign in with Apple errored: \(error)")
     }
     
 }
