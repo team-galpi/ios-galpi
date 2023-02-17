@@ -14,17 +14,28 @@ final class AppleLoginManager: NSObject {
     private var currentNonce: String?
     
     func startSignInWithAppleFlow() {
-        let authSecurityService = AuthSecurityService()
-        let nonce = authSecurityService.randomNonceString()
+        let nonce = AuthSecurityService().randomNonceString()
         currentNonce = nonce
+        
+        configureAuthorizationController()
+    }
+    
+    private func configureAuthorizationController() {
+        guard let currentNonce = currentNonce else {
+            return
+        }
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request(with: currentNonce)])
+        authorizationController.delegate = self
+        authorizationController.performRequests()
+    }
+    
+    private func request(with nonce: String) -> ASAuthorizationAppleIDRequest {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        request.nonce = authSecurityService.sha256(nonce)
+        request.nonce = AuthSecurityService().sha256(nonce)
         
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.performRequests()
+        return request
     }
     
 }
