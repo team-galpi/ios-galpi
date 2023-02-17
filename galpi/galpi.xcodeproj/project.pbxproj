@@ -37,6 +37,7 @@
 		FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A4299829070040F0A3 /* FirebaseAuth */; };
 		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
 		FDA7E4AA2999358C0040F0A3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */; };
+		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecurityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			children = (
 				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
 				FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */,
+				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
+				FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
 				FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
