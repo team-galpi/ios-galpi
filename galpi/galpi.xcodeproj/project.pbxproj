@@ -37,6 +37,7 @@
 		FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A4299829070040F0A3 /* FirebaseAuth */; };
 		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
 		FDA7E4AA2999358C0040F0A3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */; };
+		FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */; };
 		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
 		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginCredential.swift; sourceTree = "<group>"; };
 		FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecurityService.swift; sourceTree = "<group>"; };
 		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,6 +315,7 @@
 			children = (
 				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
 				FDA7E4A92999358C0040F0A3 /* AuthenticationViewModel.swift */,
+				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
 				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
 				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
 			);
@@ -464,6 +467,7 @@
 				9B445DA92994C6E700EE436E /* GDS.swift in Sources */,
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
 				9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */,
+				FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
