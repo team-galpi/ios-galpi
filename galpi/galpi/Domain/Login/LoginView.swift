@@ -13,11 +13,15 @@ struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
     
     // TODO: viewModel 주입
-    let viewModel = AuthenticationViewModel()
+    let viewModel = LoginViewModel()
     
     var body: some View {
-        signInWithAppleButton()
-            .frame(width: 240, height: 50)
+        VStack {
+            
+            signInWithAppleButton()
+                .frame(width: 240, height: 50)
+            
+        }
     }
     
 }
@@ -26,9 +30,9 @@ extension LoginView {
     
     private func signInWithAppleButton() -> some View {
         SignInWithAppleButton(.signIn) { request in
-            viewModel.handleSignInWithAppleRequest(request)
+            
         } onCompletion: { result in
-            viewModel.handleSignInWithAppleCompletion(result)
+            
         }
         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
         .frame(maxWidth: .infinity, minHeight: 50)
