@@ -12,13 +12,13 @@ import AuthenticationServices
 
 import FirebaseAuth
 
-final class AuthenticationViewModel: ObservableObject {
+final class LoginViewModel: ObservableObject {
     
     private var currentNonce: String?
 
 }
 
-extension AuthenticationViewModel {
+extension LoginViewModel {
     
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
         request.requestedScopes = [.fullName]
