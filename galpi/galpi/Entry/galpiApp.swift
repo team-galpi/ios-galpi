@@ -25,7 +25,7 @@ struct galpiApp: App {
     
     var body: some Scene {
         WindowGroup {
-            TabBarContainerView()
+            LoginView(viewModel: LoginViewModel())
         }
     }
     

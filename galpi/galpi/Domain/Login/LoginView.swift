@@ -10,8 +10,7 @@ import AuthenticationServices
 
 struct LoginView: View {
         
-    // TODO: viewModel 주입
-    @StateObject private var viewModel = LoginViewModel()
+    @StateObject var viewModel: LoginViewModel
     
     var body: some View {
         if viewModel.shouldSignIn {
@@ -29,8 +28,10 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     
+    static let loginViewModel = LoginViewModel()
+    
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: loginViewModel)
     }
     
 }
