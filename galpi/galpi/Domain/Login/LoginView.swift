@@ -16,26 +16,8 @@ struct LoginView: View {
     let viewModel = LoginViewModel()
     
     var body: some View {
-        VStack {
-            
-            signInWithAppleButton()
-                .frame(width: 240, height: 50)
-            
-        }
-    }
-    
-}
-
-extension LoginView {
-    
-    private func signInWithAppleButton() -> some View {
-        SignInWithAppleButton(.signIn) { request in
-            
-        } onCompletion: { result in
-            
-        }
-        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
-        .frame(maxWidth: .infinity, minHeight: 50)
+        AppleLoginButtonView()
+            .frame(width: 240, height: 50)
     }
     
 }
