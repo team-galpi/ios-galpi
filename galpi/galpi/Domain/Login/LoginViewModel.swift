@@ -14,7 +14,7 @@ final class LoginViewModel: ObservableObject {
     private let serverLoginManager: ServerLoginManagerProtocol
     private var socialLoginManager: SocialLoginManagerProtocol?
     
-    init(serverLoginManager: ServerLoginManagerProtocol = FirebaseLoginManager()) {
+    init(serverLoginManager: ServerLoginManagerProtocol) {
         self.serverLoginManager = serverLoginManager
         
         shouldSignIn = serverLoginManager.shouldSignIn
