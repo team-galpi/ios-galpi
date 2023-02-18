@@ -32,3 +32,13 @@ struct LoginView_Previews: PreviewProvider {
     }
     
 }
+
+fileprivate struct AppleLoginButtonView: UIViewRepresentable {
+    
+    func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
+        return ASAuthorizationAppleIDButton()
+    }
+
+    func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) { }
+    
+}

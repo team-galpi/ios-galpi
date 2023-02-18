@@ -41,7 +41,6 @@
 		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
 		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
 		FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */; };
-		FDE2739E29A090DC00DDD6B3 /* AppleLoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE2739D29A090DC00DDD6B3 /* AppleLoginButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +95,6 @@
 		FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSecurityService.swift; sourceTree = "<group>"; };
 		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 		FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginManager.swift; sourceTree = "<group>"; };
-		FDE2739D29A090DC00DDD6B3 /* AppleLoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButtonView.swift; sourceTree = "<group>"; };
 		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -325,7 +323,6 @@
 				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
 				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
 				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
-				FDE2739D29A090DC00DDD6B3 /* AppleLoginButtonView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
-				FDE2739E29A090DC00DDD6B3 /* AppleLoginButtonView.swift in Sources */,
 				FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */,
 				FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
