@@ -9,6 +9,10 @@ import FirebaseAuth
 
 final class FirebaseLoginManager {
     
+    var shouldSignIn: Bool {
+        return Auth.auth().currentUser != nil ? false : true
+    }
+    
     func signIn(with concreteSocialLoginManager: AppleLoginManager, completion: @escaping (Result<Bool, Error>) -> Void) {
         concreteSocialLoginManager.signIn { credentialResult in
             switch credentialResult {

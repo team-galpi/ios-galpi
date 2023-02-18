@@ -11,14 +11,18 @@ import AuthenticationServices
 struct LoginView: View {
         
     // TODO: viewModel 주입
-    let viewModel = LoginViewModel()
+    @StateObject private var viewModel = LoginViewModel(socialLoginManager: AppleLoginManager())
     
     var body: some View {
-        AppleLoginButtonView()
-            .frame(width: 240, height: 50)
-            .onTapGesture {
-                viewModel.appleLoginButtonTapped()
-            }
+        if viewModel.shouldSignIn {
+            AppleLoginButtonView()
+                .frame(width: 240, height: 50)
+                .onTapGesture {
+                    viewModel.appleLoginButtonTapped()
+                }
+        } else {
+            GalpiGridView()
+        }
     }
     
 }
