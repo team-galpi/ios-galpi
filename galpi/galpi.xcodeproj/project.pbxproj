@@ -97,6 +97,7 @@
 		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 		FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginManager.swift; sourceTree = "<group>"; };
 		FDE2739D29A090DC00DDD6B3 /* AppleLoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginButtonView.swift; sourceTree = "<group>"; };
+		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +263,7 @@
 		FD8949F02988FFE3003E759D /* galpi */ = {
 			isa = PBXGroup;
 			children = (
+				FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */,
 				9BE32DF52993822E002C1D86 /* Entry */,
 				FD894A29298A2616003E759D /* Entities */,
 				9BE32DF42993820E002C1D86 /* Domain */,
@@ -648,6 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = galpi/galpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
@@ -677,6 +680,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = galpi/galpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
