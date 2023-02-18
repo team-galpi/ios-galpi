@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-final class FirebaseLoginManager {
+final class FirebaseLoginManager: ServerLoginManagerInterface {
     
     var shouldSignIn: Bool {
         return Auth.auth().currentUser != nil ? false : true
