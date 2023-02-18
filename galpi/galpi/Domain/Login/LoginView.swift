@@ -9,9 +9,7 @@ import SwiftUI
 import AuthenticationServices
 
 struct LoginView: View {
-    
-    @Environment(\.colorScheme) var colorScheme
-    
+        
     // TODO: viewModel 주입
     let viewModel = LoginViewModel()
     
@@ -35,8 +33,15 @@ struct LoginView_Previews: PreviewProvider {
 
 fileprivate struct AppleLoginButtonView: UIViewRepresentable {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     func makeUIView(context: Context) -> ASAuthorizationAppleIDButton {
-        return ASAuthorizationAppleIDButton()
+        let appleLoginButton = ASAuthorizationAppleIDButton(
+            authorizationButtonType: .signIn,
+            authorizationButtonStyle: colorScheme == .dark ? .white : .black
+        )
+        
+        return appleLoginButton
     }
 
     func updateUIView(_ uiView: ASAuthorizationAppleIDButton, context: Context) { }
