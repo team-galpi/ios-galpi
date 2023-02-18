@@ -41,6 +41,7 @@
 		FDA7E4F3299F1B350040F0A3 /* AuthSecurityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */; };
 		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
 		FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */; };
+		FDE273A429A100A900DDD6B3 /* SocialLoginManagerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A329A100A900DDD6B3 /* SocialLoginManagerInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
 		FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginManager.swift; sourceTree = "<group>"; };
 		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
+		FDE273A329A100A900DDD6B3 /* SocialLoginManagerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
 				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
 				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
+				FDE273A329A100A900DDD6B3 /* SocialLoginManagerInterface.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				9B445DA92994C6E700EE436E /* GDS.swift in Sources */,
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
 				9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */,
+				FDE273A429A100A900DDD6B3 /* SocialLoginManagerInterface.swift in Sources */,
 				FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,

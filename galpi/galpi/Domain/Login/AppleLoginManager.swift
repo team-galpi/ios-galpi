@@ -9,9 +9,9 @@ import Foundation
 import AuthenticationServices
 import FirebaseAuth
 
-final class AppleLoginManager: NSObject {
+final class AppleLoginManager: NSObject, SocialLoginManagerInterface {
     
-    private let nonce = AuthSecurityService().randomNonceString()
+    let nonce = AuthSecurityService().randomNonceString()
     private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?
     
     func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void) {

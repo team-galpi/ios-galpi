@@ -11,7 +11,7 @@ import AuthenticationServices
 struct LoginView: View {
         
     // TODO: viewModel 주입
-    @StateObject private var viewModel = LoginViewModel(socialLoginManager: AppleLoginManager())
+    @StateObject private var viewModel = LoginViewModel()
     
     var body: some View {
         if viewModel.shouldSignIn {
