@@ -9,7 +9,7 @@ import Foundation
 import AuthenticationServices
 import FirebaseAuth
 
-final class AppleLoginManager: NSObject, SocialLoginManagerInterface {
+final class AppleLoginManager: NSObject, SocialLoginManagerProtocol {
     
     let nonce = AuthSecurityService().randomNonceString()
     private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?

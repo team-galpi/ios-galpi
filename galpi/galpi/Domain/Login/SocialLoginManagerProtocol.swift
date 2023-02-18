@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SocialLoginManagerInterface {
+protocol SocialLoginManagerProtocol {
     
     var nonce: String { get }
     func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void)
