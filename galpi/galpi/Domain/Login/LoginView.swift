@@ -18,6 +18,9 @@ struct LoginView: View {
     var body: some View {
         AppleLoginButtonView()
             .frame(width: 240, height: 50)
+            .onTapGesture {
+                viewModel.appleLoginButtonTapped()
+            }
     }
     
 }
