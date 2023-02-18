@@ -25,7 +25,7 @@ struct galpiApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginViewModel())
+            LoginView(viewModel: LoginViewModel(serverLoginManager: FirebaseLoginManager()))
         }
     }
     
