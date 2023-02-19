@@ -12,7 +12,6 @@ final class LoginViewModel: ObservableObject {
     @Published private(set) var shouldSignIn = true
     
     private let serverLoginManager: ServerLoginManagerProtocol
-    private var socialLoginManager: SocialLoginManagerProtocol?
     
     init(serverLoginManager: ServerLoginManagerProtocol) {
         self.serverLoginManager = serverLoginManager
@@ -21,16 +20,11 @@ final class LoginViewModel: ObservableObject {
     }
     
     func appleLoginButtonTapped() {
-        socialLoginManager = AppleLoginManager()
-        executeServerLogin()
+        executeServerLogin(with: .apple)
     }
     
-    private func executeServerLogin() {
-        guard let socialLoginManager = socialLoginManager else {
-            return
-        }
-        
-        serverLoginManager.signIn(with: socialLoginManager) { boolResult in
+    private func executeServerLogin(with socialLogin: SocialLogin) {
+        serverLoginManager.signIn(with: socialLogin) { boolResult in
             switch boolResult {
             case .success:
                 self.shouldSignIn = false

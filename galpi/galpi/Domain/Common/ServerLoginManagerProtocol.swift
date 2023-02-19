@@ -10,6 +10,6 @@ import Foundation
 protocol ServerLoginManagerProtocol {
     
     var shouldSignIn: Bool { get }
-    func signIn(with concreteSocialLoginManager: SocialLoginManagerProtocol, completion: @escaping (Result<Bool, Error>) -> Void)
+    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void)
     
 }

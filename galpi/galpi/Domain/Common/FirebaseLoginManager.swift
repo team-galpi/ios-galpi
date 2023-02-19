@@ -13,8 +13,8 @@ final class FirebaseLoginManager: ServerLoginManagerProtocol {
         return Auth.auth().currentUser != nil ? false : true
     }
     
-    func signIn(with concreteSocialLoginManager: SocialLoginManagerProtocol, completion: @escaping (Result<Bool, Error>) -> Void) {
-        concreteSocialLoginManager.signIn { credentialResult in
+    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void) {
+        socialLogin.loginManager.signIn { credentialResult in
             switch credentialResult {
             case .success(let socialAuthcredential):
                 let firebaseCredential = self.firebaseCredential(socialAuthCredential: socialAuthcredential)
