@@ -31,7 +31,7 @@ struct LoginView: View {
                     .padding(.bottom, 90)
             }
         } else {
-            GalpiGridView()
+            TabBarContainerView()
         }
     }
     
