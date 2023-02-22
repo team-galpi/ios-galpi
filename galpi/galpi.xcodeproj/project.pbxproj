@@ -42,7 +42,6 @@
 		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
 		FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */; };
 		FDE273A429A100A900DDD6B3 /* SocialLoginManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */; };
-		FDE273A629A1059B00DDD6B3 /* ServerLoginManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A529A1059B00DDD6B3 /* ServerLoginManagerProtocol.swift */; };
 		FDE273A829A2053E00DDD6B3 /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +99,6 @@
 		FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginManager.swift; sourceTree = "<group>"; };
 		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
 		FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerProtocol.swift; sourceTree = "<group>"; };
-		FDE273A529A1059B00DDD6B3 /* ServerLoginManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerLoginManagerProtocol.swift; sourceTree = "<group>"; };
 		FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,8 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				FD5F78BC2995731500075C7D /* TabBarContainerView.swift */,
-				FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */,
-				FDE273A529A1059B00DDD6B3 /* ServerLoginManagerProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -271,6 +267,7 @@
 				FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */,
 				9BE32DF52993822E002C1D86 /* Entry */,
 				FD894A29298A2616003E759D /* Entities */,
+				FDE273AD29A21C8600DDD6B3 /* Services */,
 				9BE32DF42993820E002C1D86 /* Domain */,
 				9B445DAA2994C79B00EE436E /* Extension */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
@@ -327,13 +324,37 @@
 			children = (
 				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
 				FDA7E4A92999358C0040F0A3 /* LoginViewModel.swift */,
-				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
-				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
-				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
-				FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */,
-				FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FDE273AD29A21C8600DDD6B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDE273AE29A21C9C00DDD6B3 /* OAuth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDE273AE29A21C9C00DDD6B3 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7E4F6299FD96B0040F0A3 /* FirebaseLoginManager.swift */,
+				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
+				FDA7E4F2299F1B350040F0A3 /* AuthSecurityService.swift */,
+				FDE273AF29A21EC100DDD6B3 /* SocialLogin */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		FDE273AF29A21EC100DDD6B3 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */,
+				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
+				FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */,
+			);
+			path = SocialLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,7 +516,6 @@
 				FDA7E4F7299FD96B0040F0A3 /* FirebaseLoginManager.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
 				FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */,
-				FDE273A629A1059B00DDD6B3 /* ServerLoginManagerProtocol.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,

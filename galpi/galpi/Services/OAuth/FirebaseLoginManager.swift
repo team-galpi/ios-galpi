@@ -7,6 +7,13 @@
 
 import FirebaseAuth
 
+protocol ServerLoginManagerProtocol {
+    
+    var shouldSignIn: Bool { get }
+    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void)
+    
+}
+
 final class FirebaseLoginManager: ServerLoginManagerProtocol {
     
     var shouldSignIn: Bool {
