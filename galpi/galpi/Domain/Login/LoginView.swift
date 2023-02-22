@@ -14,11 +14,22 @@ struct LoginView: View {
     
     var body: some View {
         if viewModel.shouldSignIn {
-            AppleLoginButtonView()
-                .frame(width: 240, height: 50)
-                .onTapGesture {
-                    viewModel.appleLoginButtonTapped()
-                }
+            VStack {
+                Spacer()
+                
+                Text("galpi:")
+                    .font(.system(size:65, design: .serif))
+                    .padding(.bottom, 130)
+                
+                Spacer()
+                    
+                AppleLoginButtonView()
+                    .frame(width: 240, height: 50)
+                    .onTapGesture {
+                        viewModel.appleLoginButtonTapped()
+                    }
+                    .padding(.bottom, 90)
+            }
         } else {
             GalpiGridView()
         }
