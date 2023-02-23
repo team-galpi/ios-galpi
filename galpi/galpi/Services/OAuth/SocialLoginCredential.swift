@@ -9,7 +9,7 @@ import Foundation
 
 struct SocialLoginCredential {
     
-    let providerID: String
+    let socialLoginName: SocialLogin
     let token: String
     let nonce: String
     

@@ -50,7 +50,7 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
                 return
             }
             
-            let appleLoginCredential = SocialLoginCredential(providerID: "apple.com", token: idTokenString, nonce: nonce)
+            let appleLoginCredential = SocialLoginCredential(socialLoginName: .apple, token: idTokenString, nonce: nonce)
             signInCompletion?(.success(appleLoginCredential))
         }
     }

@@ -16,4 +16,11 @@ enum SocialLogin {
         }
     }
     
+    var firebaseProviderID: String {
+        switch self {
+        case .apple:
+            return "apple.com"
+        }
+    }
+    
 }

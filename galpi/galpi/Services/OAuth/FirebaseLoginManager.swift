@@ -47,7 +47,7 @@ final class FirebaseLoginManager: ServerLoginManagerProtocol {
     
     private func firebaseCredential(socialAuthCredential: SocialLoginCredential) -> OAuthCredential {
         let firebaseCredential = OAuthProvider.credential(
-            withProviderID: socialAuthCredential.providerID,
+            withProviderID: socialAuthCredential.socialLoginName.firebaseProviderID,
             idToken: socialAuthCredential.token,
             rawNonce: socialAuthCredential.nonce
         )
