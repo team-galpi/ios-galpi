@@ -13,7 +13,9 @@ struct LoginView: View {
     @StateObject var viewModel: LoginViewModel
     
     var body: some View {
-        if viewModel.shouldSignIn {
+        if viewModel.isSignedIn {
+            TabBarContainerView()
+        } else {
             VStack {
                 Spacer()
                 
@@ -30,8 +32,6 @@ struct LoginView: View {
                     }
                     .padding(.bottom, 90)
             }
-        } else {
-            TabBarContainerView()
         }
     }
     
