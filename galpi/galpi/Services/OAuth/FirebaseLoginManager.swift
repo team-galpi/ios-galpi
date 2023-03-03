@@ -17,7 +17,7 @@ protocol ServerLoginManagerProtocol {
 final class FirebaseLoginManager: ServerLoginManagerProtocol {
     
     var shouldSignIn: Bool {
-        return Auth.auth().currentUser != nil ? false : true
+        return Auth.auth().currentUser == nil ? true : false
     }
     
     var socialLoginManager: SocialLoginManagerProtocol?
