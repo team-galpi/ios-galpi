@@ -31,11 +31,11 @@ final class FirebaseLoginManager: ServerLoginManagerProtocol {
                 let firebaseCredential = self.firebaseCredential(socialAuthCredential: socialAuthcredential)
                 
                 Auth.auth().signIn(with: firebaseCredential) { (authResult, error) in
-                  if let error {
-                    print(error)
-                    return
-                  }
-   
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    
                     completion(.success(true))
                 }
     
