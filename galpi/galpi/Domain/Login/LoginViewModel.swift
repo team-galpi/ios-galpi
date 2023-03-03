@@ -26,8 +26,8 @@ final class LoginViewModel: ObservableObject {
     private func executeServerLogin(with socialLogin: SocialLogin) {
         serverLoginManager.signIn(with: socialLogin) { boolResult in
             switch boolResult {
-            case .success:
-                self.isSignedIn = true
+            case .success(let isSignedIn):
+                self.isSignedIn = isSignedIn
             case .failure(let error):
                 print(error)
             }
