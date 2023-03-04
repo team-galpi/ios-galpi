@@ -11,7 +11,7 @@ import FirebaseAuth
 
 final class AppleLoginManager: NSObject, SocialLoginManagerProtocol {
     
-    let nonce = AuthSecurityService().randomNonceString()
+    let nonce = NonceManager().randomNonceString()
     private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?
     
     func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void) {
@@ -30,7 +30,7 @@ final class AppleLoginManager: NSObject, SocialLoginManagerProtocol {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
-        request.nonce = AuthSecurityService().sha256(nonce)
+        request.nonce = NonceManager().sha256(nonce)
         
         return request
     }

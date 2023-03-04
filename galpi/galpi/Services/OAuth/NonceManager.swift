@@ -8,7 +8,7 @@
 import Foundation
 import CryptoKit
 
-struct AuthSecurityService {
+struct NonceManager {
     
     func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
