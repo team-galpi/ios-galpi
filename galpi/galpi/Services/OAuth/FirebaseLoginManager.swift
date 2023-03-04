@@ -7,14 +7,14 @@
 
 import FirebaseAuth
 
-protocol ServerLoginManagerProtocol {
+protocol ServerAuthServiceProtocol {
     
     var isSignedIn: Bool { get }
     func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void)
     
 }
 
-final class FirebaseLoginManager: ServerLoginManagerProtocol {
+final class FirebaseLoginManager: ServerAuthServiceProtocol {
     
     var isSignedIn: Bool {
         return Auth.auth().currentUser == nil ? false : true

@@ -11,9 +11,9 @@ final class LoginViewModel: ObservableObject {
     
     @Published private(set) var isSignedIn = false
     
-    private let serverLoginManager: ServerLoginManagerProtocol
+    private let serverLoginManager: ServerAuthServiceProtocol
     
-    init(serverLoginManager: ServerLoginManagerProtocol) {
+    init(serverLoginManager: ServerAuthServiceProtocol) {
         self.serverLoginManager = serverLoginManager
         
         isSignedIn = serverLoginManager.isSignedIn
