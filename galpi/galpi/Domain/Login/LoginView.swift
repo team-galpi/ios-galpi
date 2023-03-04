@@ -39,7 +39,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     
-    static let loginViewModel = LoginViewModel(serverLoginManager: FirebaseAuthService())
+    static let loginViewModel = LoginViewModel(serverAuthService: FirebaseAuthService())
     
     static var previews: some View {
         LoginView(viewModel: loginViewModel)

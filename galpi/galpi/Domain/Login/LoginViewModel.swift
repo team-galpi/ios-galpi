@@ -11,12 +11,12 @@ final class LoginViewModel: ObservableObject {
     
     @Published private(set) var isSignedIn = false
     
-    private let serverLoginManager: ServerAuthServiceProtocol
+    private let serverAuthService: ServerAuthServiceProtocol
     
-    init(serverLoginManager: ServerAuthServiceProtocol) {
-        self.serverLoginManager = serverLoginManager
+    init(serverAuthService: ServerAuthServiceProtocol) {
+        self.serverAuthService = serverAuthService
         
-        isSignedIn = serverLoginManager.isSignedIn
+        isSignedIn = serverAuthService.isSignedIn
     }
     
     func appleLoginButtonTapped() {
@@ -24,7 +24,7 @@ final class LoginViewModel: ObservableObject {
     }
     
     private func executeServerLogin(with socialLogin: SocialLogin) {
-        serverLoginManager.signIn(with: socialLogin) { boolResult in
+        serverAuthService.signIn(with: socialLogin) { boolResult in
             switch boolResult {
             case .success(let isSignedIn):
                 self.isSignedIn = isSignedIn
