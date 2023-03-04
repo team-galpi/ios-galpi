@@ -14,7 +14,7 @@ protocol ServerAuthServiceProtocol {
     
 }
 
-final class FirebaseLoginManager: ServerAuthServiceProtocol {
+final class FirebaseAuthService: ServerAuthServiceProtocol {
     
     var isSignedIn: Bool {
         return Auth.auth().currentUser == nil ? false : true
