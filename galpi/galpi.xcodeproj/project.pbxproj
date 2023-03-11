@@ -31,6 +31,18 @@
 		FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A2029891276003E759D /* GalpiGridCellView.swift */; };
 		FD894A2329897C39003E759D /* MockCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A2229897C39003E759D /* MockCenter.swift */; };
 		FD894A262989AEC3003E759D /* Galpi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD894A252989AEC3003E759D /* Galpi.swift */; };
+		FDA7E49E2997FF890040F0A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */; };
+		FDA7E4A1299829070040F0A3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A0299829070040F0A3 /* FirebaseAnalytics */; };
+		FDA7E4A3299829070040F0A3 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A2299829070040F0A3 /* FirebaseAnalyticsSwift */; };
+		FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDA7E4A4299829070040F0A3 /* FirebaseAuth */; };
+		FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A72999306E0040F0A3 /* LoginView.swift */; };
+		FDA7E4AA2999358C0040F0A3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4A92999358C0040F0A3 /* LoginViewModel.swift */; };
+		FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */; };
+		FDA7E4F3299F1B350040F0A3 /* NonceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F2299F1B350040F0A3 /* NonceManager.swift */; };
+		FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */; };
+		FDA7E4F7299FD96B0040F0A3 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseAuthService.swift */; };
+		FDE273A429A100A900DDD6B3 /* SocialLoginManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */; };
+		FDE273A829A2053E00DDD6B3 /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +90,16 @@
 		FD894A2029891276003E759D /* GalpiGridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiGridCellView.swift; sourceTree = "<group>"; };
 		FD894A2229897C39003E759D /* MockCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCenter.swift; sourceTree = "<group>"; };
 		FD894A252989AEC3003E759D /* Galpi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Galpi.swift; sourceTree = "<group>"; };
+		FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDA7E4A72999306E0040F0A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FDA7E4A92999358C0040F0A3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginCredential.swift; sourceTree = "<group>"; };
+		FDA7E4F2299F1B350040F0A3 /* NonceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceManager.swift; sourceTree = "<group>"; };
+		FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		FDA7E4F6299FD96B0040F0A3 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
+		FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerProtocol.swift; sourceTree = "<group>"; };
+		FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA7E4A3299829070040F0A3 /* FirebaseAnalyticsSwift in Frameworks */,
+				FDA7E4A5299829070040F0A3 /* FirebaseAuth in Frameworks */,
+				FDA7E4A1299829070040F0A3 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				FD5F78BB2995731500075C7D /* Common */,
+				FDA7E4A62999303B0040F0A3 /* Login */,
 				FD894A1B298908CD003E759D /* GalpiGrid */,
 				9B5320E929892B4400F317FD /* GalpiPost */,
 			);
@@ -200,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				FD8949F52988FFE5003E759D /* Assets.xcassets */,
+				FDA7E49D2997FF890040F0A3 /* GoogleService-Info.plist */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -237,8 +264,10 @@
 		FD8949F02988FFE3003E759D /* galpi */ = {
 			isa = PBXGroup;
 			children = (
+				FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */,
 				9BE32DF52993822E002C1D86 /* Entry */,
 				FD894A29298A2616003E759D /* Entities */,
+				FDE273AD29A21C8600DDD6B3 /* Services */,
 				9BE32DF42993820E002C1D86 /* Domain */,
 				9B445DAA2994C79B00EE436E /* Extension */,
 				FD8949F72988FFE5003E759D /* Preview Content */,
@@ -290,6 +319,44 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		FDA7E4A62999303B0040F0A3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7E4A72999306E0040F0A3 /* LoginView.swift */,
+				FDA7E4A92999358C0040F0A3 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FDE273AD29A21C8600DDD6B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDE273AE29A21C9C00DDD6B3 /* OAuth */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDE273AE29A21C9C00DDD6B3 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7E4F6299FD96B0040F0A3 /* FirebaseAuthService.swift */,
+				FDA7E4F0299F19DE0040F0A3 /* SocialLoginCredential.swift */,
+				FDA7E4F2299F1B350040F0A3 /* NonceManager.swift */,
+				FDE273AF29A21EC100DDD6B3 /* SocialLogin */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		FDE273AF29A21EC100DDD6B3 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */,
+				FDA7E4F4299F1E250040F0A3 /* AppleLoginManager.swift */,
+				FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */,
+			);
+			path = SocialLogin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +373,11 @@
 			dependencies = (
 			);
 			name = galpi;
+			packageProductDependencies = (
+				FDA7E4A0299829070040F0A3 /* FirebaseAnalytics */,
+				FDA7E4A2299829070040F0A3 /* FirebaseAnalyticsSwift */,
+				FDA7E4A4299829070040F0A3 /* FirebaseAuth */,
+			);
 			productName = galpi;
 			productReference = FD8949EE2988FFE3003E759D /* galpi.app */;
 			productType = "com.apple.product-type.application";
@@ -378,6 +450,9 @@
 				Base,
 			);
 			mainGroup = FD8949E52988FFE3003E759D;
+			packageReferences = (
+				FDA7E49F299829070040F0A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = FD8949EF2988FFE3003E759D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +474,7 @@
 				FD8949F62988FFE5003E759D /* Assets.xcassets in Resources */,
 				9B445DE52994ECD600EE436E /* JejuMyeongjoOTF.otf in Resources */,
 				9B445DEB2994F2AD00EE436E /* KoPubBatangLight.ttf in Resources */,
+				FDA7E49E2997FF890040F0A3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,19 +502,27 @@
 				9B445DA92994C6E700EE436E /* GDS.swift in Sources */,
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
 				9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */,
+				FDE273A429A100A900DDD6B3 /* SocialLoginManagerProtocol.swift in Sources */,
+				FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
+				FDA7E4AA2999358C0040F0A3 /* LoginViewModel.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
 				9B445DA72994C6C600EE436E /* Color.swift in Sources */,
 				9B5320EF29892BA700F317FD /* TextLineView.swift in Sources */,
+				FDE273A829A2053E00DDD6B3 /* SocialLogin.swift in Sources */,
+				FDA7E4F3299F1B350040F0A3 /* NonceManager.swift in Sources */,
+				FDA7E4F7299FD96B0040F0A3 /* FirebaseAuthService.swift in Sources */,
 				FD5F78BD2995731500075C7D /* TabBarContainerView.swift in Sources */,
+				FDA7E4A82999306E0040F0A3 /* LoginView.swift in Sources */,
 				FD894A2129891276003E759D /* GalpiGridCellView.swift in Sources */,
 				FD894A1D29890958003E759D /* GalpiGridView.swift in Sources */,
 				FD8949F22988FFE3003E759D /* galpiApp.swift in Sources */,
 				FD894A2329897C39003E759D /* MockCenter.swift in Sources */,
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
 				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
+				FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = galpi/galpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
@@ -623,6 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = galpi/galpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"galpi/Preview Content\"";
@@ -763,6 +849,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDA7E49F299829070040F0A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDA7E4A0299829070040F0A3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDA7E49F299829070040F0A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FDA7E4A2299829070040F0A3 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDA7E49F299829070040F0A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FDA7E4A4299829070040F0A3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDA7E49F299829070040F0A3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD8949E62988FFE3003E759D /* Project object */;
 }
