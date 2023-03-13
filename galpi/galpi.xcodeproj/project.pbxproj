@@ -43,6 +43,7 @@
 		FDA7E4F7299FD96B0040F0A3 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7E4F6299FD96B0040F0A3 /* FirebaseAuthService.swift */; };
 		FDE273A429A100A900DDD6B3 /* SocialLoginManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */; };
 		FDE273A829A2053E00DDD6B3 /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */; };
+		FDEFAB7B29BF6C6B00AE1591 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7A29BF6C6B00AE1591 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		FDE2739F29A0A9EF00DDD6B3 /* galpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = galpi.entitlements; sourceTree = "<group>"; };
 		FDE273A329A100A900DDD6B3 /* SocialLoginManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManagerProtocol.swift; sourceTree = "<group>"; };
 		FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
+		FDEFAB7A29BF6C6B00AE1591 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				9B445DAB2994C7BF00EE436E /* Color+Extension.swift */,
 				9B445DAD2994C88E00EE436E /* Font+Extension.swift */,
+				FDEFAB7A29BF6C6B00AE1591 /* View+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				FDA7E4F1299F19DE0040F0A3 /* SocialLoginCredential.swift in Sources */,
 				9BE87B3B2990E6E8002A1B4E /* CalendarView.swift in Sources */,
 				9BB2220B298EBB4F00C25038 /* GalpiTextEditorView.swift in Sources */,
+				FDEFAB7B29BF6C6B00AE1591 /* View+Extension.swift in Sources */,
 				9B5320ED29892B8900F317FD /* FieldView.swift in Sources */,
 				FDA7E4AA2999358C0040F0A3 /* LoginViewModel.swift in Sources */,
 				9B5320EB29892B6200F317FD /* GalpiPostView.swift in Sources */,
