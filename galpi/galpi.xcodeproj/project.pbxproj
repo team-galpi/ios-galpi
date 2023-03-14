@@ -47,6 +47,7 @@
 		FDEFAB7D29BF8E8B00AE1591 /* GalpiErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */; };
 		FDEFAB8029C0745700AE1591 /* SocialLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */; };
 		FDEFAB8229C0C71000AE1591 /* ServerAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB8129C0C71000AE1591 /* ServerAuthError.swift */; };
+		FDEFAB8429C0D6EF00AE1591 /* GalpiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB8329C0D6EF00AE1591 /* GalpiError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiErrorProtocol.swift; sourceTree = "<group>"; };
 		FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 		FDEFAB8129C0C71000AE1591 /* ServerAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAuthError.swift; sourceTree = "<group>"; };
+		FDEFAB8329C0D6EF00AE1591 /* GalpiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */,
+				FDEFAB8329C0D6EF00AE1591 /* GalpiError.swift */,
 				FDEFAB8129C0C71000AE1591 /* ServerAuthError.swift */,
 				FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */,
 			);
@@ -520,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDEFAB7D29BF8E8B00AE1591 /* GalpiErrorProtocol.swift in Sources */,
+				FDEFAB8429C0D6EF00AE1591 /* GalpiError.swift in Sources */,
 				9B445DA92994C6E700EE436E /* GDS.swift in Sources */,
 				9B5320F229895F3000F317FD /* GalpiPostViewModel.swift in Sources */,
 				9B445DAE2994C88E00EE436E /* Font+Extension.swift in Sources */,
