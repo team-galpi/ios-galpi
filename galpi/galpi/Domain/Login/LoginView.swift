@@ -32,6 +32,7 @@ struct LoginView: View {
                     }
                     .padding(.bottom, 90)
             }
+            .errorAlert(error: $viewModel.error)
         }
     }
     
