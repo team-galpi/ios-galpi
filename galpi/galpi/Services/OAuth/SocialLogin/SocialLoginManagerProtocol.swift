@@ -10,6 +10,6 @@ import Foundation
 protocol SocialLoginManagerProtocol {
     
     var nonce: String { get }
-    func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void)
+    func signIn(completion: @escaping (Result<SocialLoginCredential, SocialLoginError>) -> Void)
     
 }

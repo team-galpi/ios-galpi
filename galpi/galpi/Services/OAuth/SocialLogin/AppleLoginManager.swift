@@ -12,9 +12,9 @@ import FirebaseAuth
 final class AppleLoginManager: NSObject, SocialLoginManagerProtocol {
     
     let nonce = NonceManager().randomNonceString()
-    private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?
+    private var signInCompletion: ((Result<SocialLoginCredential, SocialLoginError>) -> Void)?
     
-    func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void) {
+    func signIn(completion: @escaping (Result<SocialLoginCredential, SocialLoginError>) -> Void) {
         configureAuthorizationController()
         
         signInCompletion = completion
