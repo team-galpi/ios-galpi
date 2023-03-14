@@ -45,6 +45,7 @@
 		FDE273A829A2053E00DDD6B3 /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */; };
 		FDEFAB7B29BF6C6B00AE1591 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7A29BF6C6B00AE1591 /* View+Extension.swift */; };
 		FDEFAB7D29BF8E8B00AE1591 /* GalpiErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */; };
+		FDEFAB8029C0745700AE1591 /* SocialLoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		FDE273A729A2053E00DDD6B3 /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
 		FDEFAB7A29BF6C6B00AE1591 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalpiErrorProtocol.swift; sourceTree = "<group>"; };
+		FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +241,8 @@
 		FD5F78BB2995731500075C7D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FDEFAB7E29C071CD00AE1591 /* Error */,
 				FD5F78BC2995731500075C7D /* TabBarContainerView.swift */,
+				FDEFAB7E29C071CD00AE1591 /* Error */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				FDEFAB7C29BF8E8B00AE1591 /* GalpiErrorProtocol.swift */,
+				FDEFAB7F29C0745700AE1591 /* SocialLoginError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				FD894A262989AEC3003E759D /* Galpi.swift in Sources */,
 				9B445DAC2994C7BF00EE436E /* Color+Extension.swift in Sources */,
 				FDA7E4F5299F1E250040F0A3 /* AppleLoginManager.swift in Sources */,
+				FDEFAB8029C0745700AE1591 /* SocialLoginError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
