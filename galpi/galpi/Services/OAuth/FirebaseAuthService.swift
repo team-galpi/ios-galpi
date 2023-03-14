@@ -31,8 +31,8 @@ final class FirebaseAuthService: ServerAuthServiceProtocol {
                 let firebaseCredential = self.firebaseCredential(socialAuthCredential: socialAuthcredential)
                 
                 Auth.auth().signIn(with: firebaseCredential) { (authResult, error) in
-                    if let error = error {
-                        print(error)
+                    guard error == nil else {
+                        completion(.failure(ServerAuthError.internalError))
                         return
                     }
                     
@@ -40,7 +40,7 @@ final class FirebaseAuthService: ServerAuthServiceProtocol {
                 }
     
             case .failure(let error):
-                print(error)
+                completion(.failure(ServerAuthError.socialLoginError(error)))
             }
         }
     }
