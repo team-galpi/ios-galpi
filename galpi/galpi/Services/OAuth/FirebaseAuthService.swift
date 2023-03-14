@@ -10,7 +10,7 @@ import FirebaseAuth
 protocol ServerAuthServiceProtocol {
     
     var isSignedIn: Bool { get }
-    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void)
+    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, ServerAuthError>) -> Void)
     
 }
 
@@ -22,7 +22,7 @@ final class FirebaseAuthService: ServerAuthServiceProtocol {
     
     var socialLoginManager: SocialLoginManagerProtocol?
 
-    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func signIn(with socialLogin: SocialLogin, completion: @escaping (Result<Bool, ServerAuthError>) -> Void) {
         socialLoginManager = socialLogin.loginManager
         
         socialLoginManager?.signIn { credentialResult in
