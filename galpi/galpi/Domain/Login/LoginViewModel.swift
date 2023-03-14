@@ -30,7 +30,7 @@ final class LoginViewModel: ObservableObject {
             case .success(let isSignedIn):
                 self.isSignedIn = isSignedIn
             case .failure(let error):
-                print(error)
+                self.error = GalpiError.serverAuthError(error)
             }
         }
     }
