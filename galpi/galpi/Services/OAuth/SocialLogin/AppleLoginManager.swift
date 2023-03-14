@@ -42,11 +42,11 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let appleIDToken = appleIDCredential.identityToken else {
-                print("Unable to fetch identity token")
+                signInCompletion?(.failure(SocialLoginError.internalError))
                 return
             }
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                signInCompletion?(.failure(SocialLoginError.idTokenString))
                 return
             }
             
@@ -56,7 +56,16 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("Sign in with Apple errored: \(error)")
+        guard let authError = error as? ASAuthorizationError else {
+            return
+        }
+        
+        switch authError.code {
+        case .canceled:
+            signInCompletion?(.failure(SocialLoginError.canceled))
+        default:
+            signInCompletion?(.failure(SocialLoginError.internalError))
+        }
     }
     
 }
