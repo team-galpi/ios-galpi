@@ -10,7 +10,7 @@ import Foundation
 protocol GalpiErrorProtocol: LocalizedError {
     
     var code: String { get }
-    
+    var errorReason: String { get }
 }
 
 extension GalpiErrorProtocol {
