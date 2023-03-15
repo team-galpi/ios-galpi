@@ -13,7 +13,7 @@ enum ServerAuthError: GalpiErrorProtocol {
     var code: String {
         switch self {
         case .internalError:
-            return "S100"
+            return "F100"
         case .socialLoginError(let error):
             return error.code
         }
