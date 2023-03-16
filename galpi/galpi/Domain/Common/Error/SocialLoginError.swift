@@ -25,7 +25,7 @@ enum SocialLoginError: GalpiErrorProtocol {
         }
     }
     
-    var errorReason: String {
+    var failureReason: String? {
         switch self {
         case .canceled:
             return "유저가 인증 절차 취소"

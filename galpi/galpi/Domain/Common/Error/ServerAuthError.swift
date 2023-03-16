@@ -19,12 +19,12 @@ enum ServerAuthError: GalpiErrorProtocol {
         }
     }
     
-    var errorReason: String {
+    var failureReason: String? {
         switch self {
         case .internalError:
             return "Server Auth 내부 에러"
         case .socialLoginError(let error):
-            return error.errorReason
+            return error.failureReason
         }
     }
     

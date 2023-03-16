@@ -18,10 +18,10 @@ enum GalpiError: LocalizedError, GalpiErrorProtocol {
         }
     }
     
-    var errorReason: String {
+    var failureReason: String? {
         switch self {
         case .serverAuthError(let error):
-            return error.errorReason
+            return error.failureReason
         }
     }
     
