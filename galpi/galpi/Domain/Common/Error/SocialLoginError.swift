@@ -15,13 +15,13 @@ enum SocialLoginError: GalpiErrorProtocol {
     var code: String {
         switch self {
         case .canceled:
-            return "S100"
+            return "SL100"
         case .internalError:
-            return "S200"
+            return "SL200"
         case .identityToken:
-            return "S300"
+            return "SL300"
         case .idTokenString:
-            return "S400"
+            return "SL400"
         }
     }
     
