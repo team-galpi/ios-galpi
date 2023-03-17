@@ -22,7 +22,7 @@ enum SocialLoginError: GalpiErrorProtocol {
     var failureReason: String? {
         switch self {
         case .canceled:
-            return "유저가 인증 절차 취소"
+            return "유저가 소셜 로그인 인증 절차 취소"
         case .custom(let customFailureReason):
             return customFailureReason
         }
