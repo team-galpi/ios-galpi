@@ -42,11 +42,11 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let appleIDToken = appleIDCredential.identityToken else {
-                signInCompletion?(.failure(SocialLoginError.internalError))
+                signInCompletion?(.failure(SocialLoginError.custom("identity token이 fetch 되지 않음")))
                 return
             }
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                signInCompletion?(.failure(SocialLoginError.idTokenString))
+                signInCompletion?(.failure(SocialLoginError.custom("data가 token string으로 직렬화되지 않음")))
                 return
             }
             
