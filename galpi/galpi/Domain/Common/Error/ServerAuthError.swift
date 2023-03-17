@@ -9,6 +9,7 @@ enum ServerAuthError: GalpiErrorProtocol {
 
     case internalError
     case socialLoginError(SocialLoginError)
+    case custom(String)
     
     var code: String {
         switch self {
@@ -16,6 +17,8 @@ enum ServerAuthError: GalpiErrorProtocol {
             return "SA100"
         case .socialLoginError(let error):
             return error.code
+        case .custom:
+            return "SA999"
         }
     }
     
@@ -25,6 +28,8 @@ enum ServerAuthError: GalpiErrorProtocol {
             return "Server Auth 내부 에러"
         case .socialLoginError(let error):
             return error.failureReason
+        case .custom(let customFailureReason):
+            return customFailureReason
         }
     }
     

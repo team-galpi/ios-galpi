@@ -11,6 +11,7 @@ enum SocialLoginError: GalpiErrorProtocol {
     case internalError
     case identityToken
     case idTokenString
+    case custom(String)
     
     var code: String {
         switch self {
@@ -22,6 +23,8 @@ enum SocialLoginError: GalpiErrorProtocol {
             return "SL300"
         case .idTokenString:
             return "SL400"
+        case .custom(_):
+            return "SL999"
         }
     }
     
@@ -35,6 +38,8 @@ enum SocialLoginError: GalpiErrorProtocol {
             return "identity token의 fetch 실패"
         case .idTokenString:
             return "data를 token string으로 직렬화하는 것 실패"
+        case .custom(let customFailureReason):
+            return customFailureReason
         }
     }
     
