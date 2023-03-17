@@ -64,7 +64,7 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
         case .canceled:
             signInCompletion?(.failure(SocialLoginError.canceled))
         default:
-            signInCompletion?(.failure(SocialLoginError.internalError))
+            signInCompletion?(.failure(SocialLoginError.custom(authError.localizedDescription)))
         }
     }
     
