@@ -32,7 +32,7 @@ final class FirebaseAuthService: ServerAuthServiceProtocol {
                 
                 Auth.auth().signIn(with: firebaseCredential) { (authResult, error) in
                     guard error == nil else {
-                        completion(.failure(ServerAuthError.internalError))
+                        completion(.failure(ServerAuthError.custom(error?.localizedDescription ?? "")))
                         return
                     }
                     
