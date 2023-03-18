@@ -9,95 +9,98 @@ import SwiftUI
 
 struct GalpiReadView: View {
     
-    @ObservedObject var viewModel: GalpiReadViewModel
+    @StateObject var viewModel: GalpiReadViewModel
     
     var body: some View {
-        VStack(alignment: .leading) {
-            GalpiReadTopBarView(viewModel: viewModel)
+        
+        HStack {
             
-            ScrollView {
-                HStack(alignment: .top) {
-                    Spacer(minLength: 30)
-                    
-                    DescriptionView(
-                        title: "title",
-                        description: viewModel.state.galpi.title,
-                        width: AppConstraints.width - AppConstraints.tripartitionWidth - 45
-                    )
+            Spacer()
+                .frame(width: 30)
+            
+            VStack {
+                
+                GalpiReadTopBarView(viewModel: viewModel)
+                
+                Spacer(minLength: 30)
+                
+                ScrollView {
+                    HStack(alignment: .top) {
+                        
+                        DescriptionView(
+                            title: "title",
+                            description: viewModel.galpi.title,
+                            width: AppConstraints.width - AppConstraints.tripartitionWidth - 30
+                        )
+                        
+                        Spacer()
+                            .frame(width: 30)
+                        
+                        DescriptionView(
+                            title: "date",
+                            description: viewModel.galpi.date.formatDateToString(),
+                            width: AppConstraints.tripartitionWidth
+                        )
+                        
+                    }
                     
                     Spacer()
-                        .frame(width: 30)
-                                        
-                    DescriptionView(
-                        title: "date",
-                        description: viewModel.state.galpi.date.formatDateToString(),
-                        width: AppConstraints.tripartitionWidth
-                    )
+                        .frame(height: 30)
                     
-                    Spacer(minLength: 30)
-                }
-                
-                Spacer()
-                    .frame(height: 30)
-                
-                HStack(alignment: .top) {
-                    Spacer(minLength: 30)
-                    
-                    DescriptionView(
-                        title: "author",
-                        description: viewModel.state.galpi.author,
-                        width: AppConstraints.width - AppConstraints.tripartitionWidth - 45
-                    )
+                    HStack(alignment: .top) {
+                        
+                        DescriptionView(
+                            title: "author",
+                            description: viewModel.galpi.author,
+                            width: AppConstraints.width - AppConstraints.tripartitionWidth - 30
+                        )
+                        
+                        Spacer()
+                            .frame(width: 30)
+                        
+                        DescriptionView(
+                            title: "publisher",
+                            description: viewModel.galpi.publisher,
+                            width: AppConstraints.tripartitionWidth
+                        )
+                        
+                    }
                     
                     Spacer()
-                        .frame(width: 30)
+                        .frame(height: 30)
                     
-                    DescriptionView(
-                        title: "publisher",
-                        description: viewModel.state.galpi.publisher,
-                        width: AppConstraints.tripartitionWidth
-                    )
+                    HStack(alignment: .top) {
+                        
+                        DescriptionView(
+                            title: "quotes",
+                            description: viewModel.galpi.quotes,
+                            width: AppConstraints.width
+                        )
+                        
+                    }
+                    .frame(alignment: .topLeading)
                     
-                    Spacer(minLength: 30)
+                    Spacer()
+                        .frame(height: 30)
+                    
+                    HStack(alignment: .top) {
+                        
+                        DescriptionView(
+                            title: "opinion",
+                            description: viewModel.galpi.opinion,
+                            width: AppConstraints.width
+                        )
+                        
+                    }
+                    .frame(alignment: .topLeading)
+                    
+                    Spacer()
+                        .frame(height: 30)
                 }
-                
-                Spacer()
-                    .frame(height: 30)
-                
-                HStack(alignment: .top) {
-                    Spacer(minLength: 30)
-                    
-                    DescriptionView(
-                        title: "quotes",
-                        description: viewModel.state.galpi.quotes,
-                        width: AppConstraints.width - 15
-                    )
-                    
-                    Spacer(minLength: 30)
-                }
-                .frame(alignment: .topLeading)
-                
-                Spacer()
-                    .frame(height: 30)
-                
-                HStack(alignment: .top) {
-                    
-                    Spacer(minLength: 30)
-                    
-                    DescriptionView(
-                        title: "opinion",
-                        description: viewModel.state.galpi.opinion,
-                        width: AppConstraints.width - 15
-                    )
-                    
-                    Spacer(minLength: 30)
-                }
-                .frame(alignment: .topLeading)
-                
-                Spacer()
-                    .frame(height: 30)
             }
+            
+            Spacer()
+                .frame(width: 30)
         }
     }
-    
 }
