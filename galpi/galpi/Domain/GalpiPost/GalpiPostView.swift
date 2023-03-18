@@ -130,9 +130,11 @@ struct GalpiPostView: View {
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", description: viewModel.state.galpi.quotes) { description in
-                                        viewModel.state.galpi.quotes = description
-                                    }
+                                    GalpiTextEditorView(
+                                        title: "quotes",
+                                        viewModel: viewModel,
+                                        description: viewModel.state.galpi.quotes
+                                    )
                                 }
                                 TextLineView(numberOfLines: 1)
                             } else {
@@ -151,9 +153,11 @@ struct GalpiPostView: View {
                                     }
                                 }
                                 .fullScreenCover(isPresented: $isQuotesPresented) {
-                                    GalpiTextEditorView(title: "quotes", description: viewModel.state.galpi.quotes) { description in
-                                        viewModel.state.galpi.quotes = description
-                                    }
+                                    GalpiTextEditorView(
+                                        title: "quotes",
+                                        viewModel: viewModel,
+                                        description: viewModel.state.galpi.quotes
+                                    )
                                 }
                                 Rectangle()
                                     .frame(width: AppConstraints.width, height: 1, alignment: .center)
