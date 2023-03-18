@@ -18,30 +18,29 @@ struct GalpiReadTopBarView: View {
                 dismiss()
             } label: {
                 Image(systemName: "xmark")
-                    .padding(20)
-                    .font(.title3)
-                    .fontWeight(.thin)
+                    .font(.system(size: 15, weight: .thin))
                     .foregroundColor(GDS.AppColor.GrayScale.gray88)
             }
             
             Spacer()
             
             Button {
-                viewModel.action.tapEditModeButton()
+                viewModel.tapEditModeButton()
             } label: {
                 Image(systemName: "pencil.tip")
-                    .padding(20)
-                    .font(.title3)
-                    .fontWeight(.thin)
+                    .font(.system(size: 15, weight: .thin))
                     .foregroundColor(GDS.AppColor.GrayScale.gray88)
             }
             .fullScreenCover(
-                isPresented: $viewModel.state.isEditModeViewPresented
+                isPresented: $viewModel.isEditModeViewPresented
             ) {
                 GalpiPostView(
                     viewModel: GalpiPostViewModel(
-                        galpi: viewModel.state.galpi
-                    )) { isDismiss in
+                        galpi: viewModel.galpi,
+                        isEditMode: true
+                    )
+                ) { dismiss in
+                    
                 }
             }
         }

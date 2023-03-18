@@ -9,35 +9,15 @@ import Foundation
 
 final class GalpiReadViewModel: ObservableObject {
     
-    var action: Action
-    var state: State
+    @Published var galpi: Galpi
+    @Published var isEditModeViewPresented: Bool = false
     
-    class Action {
-        
-        weak var state: State?
-        
-        func tapEditModeButton() {
-            state?.isEditModeViewPresented.toggle()
-        }
-        
-        init(state: State) {
-            self.state = state
-        }
-    }
-    
-    class State {
-        @Published var galpi: Galpi
-        @Published var isEditModeViewPresented: Bool = false
-        @Published var isDismiss: Bool = false
-        
-        init(galpi: Galpi) {
-            self.galpi = galpi
-        }
-    }
-
     init(galpi: Galpi) {
-        self.state = State(galpi: galpi)
-        self.action = Action(state: self.state)
+        self.galpi = galpi
+    }
+    
+    func tapEditModeButton() {
+        isEditModeViewPresented.toggle()
     }
     
 }
