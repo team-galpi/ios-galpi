@@ -10,6 +10,7 @@ import Foundation
 final class LoginViewModel: ObservableObject {
     
     @Published private(set) var isSignedIn = false
+    @Published var error: GalpiError?
     
     private let serverAuthService: ServerAuthServiceProtocol
     
@@ -29,7 +30,8 @@ final class LoginViewModel: ObservableObject {
             case .success(let isSignedIn):
                 self.isSignedIn = isSignedIn
             case .failure(let error):
-                print(error)
+                print(error.failureReason as Any)
+                self.error = GalpiError.serverAuthError(error)
             }
         }
     }

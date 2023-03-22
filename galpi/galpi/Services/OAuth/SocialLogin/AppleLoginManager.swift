@@ -12,9 +12,9 @@ import FirebaseAuth
 final class AppleLoginManager: NSObject, SocialLoginManagerProtocol {
     
     let nonce = NonceManager().randomNonceString()
-    private var signInCompletion: ((Result<SocialLoginCredential, Error>) -> Void)?
+    private var signInCompletion: ((Result<SocialLoginCredential, SocialLoginError>) -> Void)?
     
-    func signIn(completion: @escaping (Result<SocialLoginCredential, Error>) -> Void) {
+    func signIn(completion: @escaping (Result<SocialLoginCredential, SocialLoginError>) -> Void) {
         configureAuthorizationController()
         
         signInCompletion = completion
@@ -42,11 +42,11 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let appleIDToken = appleIDCredential.identityToken else {
-                print("Unable to fetch identity token")
+                signInCompletion?(.failure(SocialLoginError.custom("identity token이 fetch 되지 않음")))
                 return
             }
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                signInCompletion?(.failure(SocialLoginError.custom("data가 token string으로 직렬화되지 않음")))
                 return
             }
             
@@ -56,7 +56,16 @@ extension AppleLoginManager: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("Sign in with Apple errored: \(error)")
+        guard let authError = error as? ASAuthorizationError else {
+            return
+        }
+        
+        switch authError.code {
+        case .canceled:
+            signInCompletion?(.failure(SocialLoginError.canceled))
+        default:
+            signInCompletion?(.failure(SocialLoginError.custom(authError.localizedDescription)))
+        }
     }
     
 }
